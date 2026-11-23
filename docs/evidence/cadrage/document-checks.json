@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-20",
+  "scope": "BC2 framing document presence, relative links, JSON syntax, three PDF hashes; not application tests",
+  "checks": {
+    "markdown": 11,
+    "json": 2,
+    "local_links": 18
+  },
+  "required_files_present": 10,
+  "errors": [],
+  "status": "passed"
+}

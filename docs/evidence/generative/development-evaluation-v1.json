@@ -1,0 +1,89 @@
+{
+  "created_at_utc": "2026-11-20T08:26:45.969889+00:00",
+  "run_id": "baseline-20261120-v2",
+  "selected_temperature_fixed_before_evaluation": 0.1,
+  "temperatures_compared": [
+    0.1,
+    0.4
+  ],
+  "seed": 42,
+  "cases": [
+    {
+      "case": "portfolio",
+      "method": "deterministic_template",
+      "valid": true,
+      "elapsed_seconds": 0.0007285769997906755,
+      "output": {
+        "summary": "Le modèle retenu sert à explorer le risque de défaut sur une cohorte bancaire. Son rappel doit être examiné avec sa précision et la charge des fausses alertes.",
+        "limits": "Ces données historiques ont une portée limitée. Une relecture humaine est nécessaire avant tout usage métier.",
+        "evidence_ids": [
+          "dataset_period",
+          "selected_model",
+          "test_recall",
+          "test_precision"
+        ]
+      },
+      "reference_coverage": 0.6666666666666666
+    },
+    {
+      "case": "portfolio",
+      "method": "llm",
+      "temperature": 0.1,
+      "valid": false,
+      "error_type": "ValueError",
+      "reason": "Chiffres, HTML ou coordonnées non autorisés dans le texte narratif"
+    },
+    {
+      "case": "portfolio",
+      "method": "llm",
+      "temperature": 0.4,
+      "valid": false,
+      "error_type": "ValueError",
+      "reason": "Chiffres, HTML ou coordonnées non autorisés dans le texte narratif"
+    },
+    {
+      "case": "market",
+      "method": "deterministic_template",
+      "valid": true,
+      "elapsed_seconds": 7.823099986126181e-05,
+      "output": {
+        "summary": "Le cours observé décrit une fenêtre de marché distincte du portefeuille de clients. Le recul depuis les plus hauts et la variation du cours apportent deux lectures complémentaires.",
+        "limits": "Ces données historiques ont une portée limitée. Une relecture humaine est nécessaire avant tout usage métier.",
+        "evidence_ids": [
+          "symbol",
+          "window",
+          "period_return",
+          "max_drawdown"
+        ]
+      },
+      "reference_coverage": 0.6666666666666666
+    },
+    {
+      "case": "market",
+      "method": "llm",
+      "temperature": 0.1,
+      "valid": false,
+      "error_type": "ValueError",
+      "reason": "Chiffres, HTML ou coordonnées non autorisés dans le texte narratif"
+    },
+    {
+      "case": "market",
+      "method": "llm",
+      "temperature": 0.4,
+      "valid": false,
+      "error_type": "ValueError",
+      "reason": "Chiffres, HTML ou coordonnées non autorisés dans le texte narratif"
+    }
+  ],
+  "human_rubric": {
+    "status": "not performed",
+    "criteria": [
+      "clarté",
+      "pertinence métier",
+      "inclusivité",
+      "fidélité sémantique"
+    ],
+    "no_fabricated_human_rating": true
+  },
+  "energy": "No energy/CO2 sensor measurement; measured wall time and tokens only"
+}

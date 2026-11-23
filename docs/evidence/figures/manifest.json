@@ -1,0 +1,11 @@
+{
+  "run_id": "reproduce-20261120-v1",
+  "source": "Persisted model results and real source data; no new tuning",
+  "files": {
+    "univariate.png": "13e83f07d1050ff98f180275ed2071419267f66e8fffc3ca86b89082c7e327a1",
+    "performance.png": "2235c8275ead0485f06a2a12e17acb4afcb396354d1100ead4cbf58fd8b5e38b",
+    "market.png": "460733af51e1a22a8d445ee9325a15701babeb8c6846461eece4907e58e1c726",
+    "projections-calibration.png": "01dc49a727ff0bda207ed1476cf90a6313e9f536887cea854ff9673a81db9730",
+    "macro.png": "2d63cd8de38f4ddc3e1f638e6d67e6c173b19f03e9eeaec9b5de80306205d3bb"
+  }
+}

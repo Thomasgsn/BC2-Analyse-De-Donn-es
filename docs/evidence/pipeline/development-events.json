@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "run": "baseline-20261120-v1",
+      "status": "failed",
+      "selection_frozen_before_test": {
+        "selected": "forest",
+        "threshold": 0.15
+      },
+      "reason": "Exact reload parity assertion failed for parallel forest prediction; repeated prediction differed by 2.220446049250313e-16, other models exact",
+      "correction": "Training bounded to two threads; forest validation/inference made serial for deterministic summation. Same features, hyperparameters, splits, seed and selection protocol; no tuning on test",
+      "failed_run_preserved": true
+    }
+  ],
+  "tests_before_pipeline": {
+    "passed": 21,
+    "exit_code": 0,
+    "seconds": 2.38
+  }
+}

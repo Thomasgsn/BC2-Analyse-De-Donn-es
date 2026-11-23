@@ -1,0 +1,15 @@
+{
+  "event": "macro_browser_checks",
+  "series_switch": true,
+  "period_switch_hides_2005_window_on_5_years": true,
+  "summary_table": true,
+  "csv_download": true,
+  "axe_violations": [],
+  "axe_incomplete": 1,
+  "mobile_global_overflow": false,
+  "console_errors": [],
+  "screenshots": {
+    "macro-mobile.png": "98d6109c506c963139a6604e9d5edf5ae38e30fd52d964db141ff85a19455399",
+    "macro-desktop.png": "6eb7e1a0508b33e5544c65c1a930be6f71c58bb070d7998ed33dbebf82e085d5"
+  }
+}

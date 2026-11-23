@@ -1,0 +1,11 @@
+{
+  "at_utc": "2026-11-20T08:17:47.807917+00:00",
+  "url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+  "mode": "verified previously researched official candidate",
+  "zip_sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+  "xls_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+  "license": "CC BY 4.0",
+  "attribution": "I-Cheng Yeh, UCI Default of Credit Card Clients, DOI 10.24432/C55S3H",
+  "teacher_approval": "not provided; technical use authorized by user",
+  "source_unchanged": true
+}

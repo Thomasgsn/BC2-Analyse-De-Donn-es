@@ -1,0 +1,369 @@
+[
+  {
+    "title": "Analyse du défaut bancaire",
+    "paragraphs": [
+      "RNCP40875 — Bloc 2 : analyse de données et intelligence artificielle. Thomas Gassmann, travail individuel. Livraison locale du 20 novembre 2026, complétée le 23 novembre (contexte macro-économique). Échéance non communiquée.",
+      "Question étudiée : comment comparer des méthodes de détection du défaut de paiement, comprendre les erreurs et présenter des indicateurs à un analyste bancaire ? Le score reste une aide à l’exploration, sans décision automatique de crédit.",
+      "Le dataset officiel UCI Default of Credit Card Clients contient 30 000 observations et 23 variables explicatives. Le dataset de référence du sujet n’étant pas disponible, ce dataset public de référence en risque de crédit est utilisé : la cible devient le défaut de paiement du mois suivant au lieu de la résiliation, avec la même démarche d’analyse.",
+      "La forêt choisie sur validation atteint un rappel de 80,71 % et une précision de 34,17 % sur 6 000 observations réservées. Les 2 063 fausses alertes imposent une revue humaine importante. Le résultat ne démontre ni rentabilité, ni aptitude à traiter des clients actuels.",
+      "Ce dossier réunit des calculs réellement exécutés, un dashboard local, une comparaison générative et une feuille de route. Il prépare les compétences C3.1 à C5.3 ; seule la décision du jury peut valider le bloc."
+    ],
+    "table": [
+      [
+        "Partie",
+        "Pages"
+      ],
+      [
+        "Données et protocole",
+        "2–4"
+      ],
+      [
+        "Résultats statistiques et prédictifs",
+        "5–7"
+      ],
+      [
+        "Cotations, macro-économie, dashboard et génération",
+        "8–11"
+      ],
+      [
+        "Stratégie, preuves, réserves et usage de l’IA",
+        "12–14"
+      ]
+    ],
+    "figure": null
+  },
+  {
+    "title": "Sources, typage et qualité",
+    "paragraphs": [
+      "Source principale : UCI, I-Cheng Yeh, DOI 10.24432/C55S3H, licence CC BY 4.0. Historiques taïwanais d’avril à septembre 2005, cible « default payment next month ». L’ID identifie une ligne ; il ne prouve aucune chronologie. Le fichier source XLS est conservé sans modification.",
+      "SHA-256 du XLS : 30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933. Le contrat refuse une empreinte, un schéma, des identifiants ou une cible inattendus. L’archive ZIP est contrôlée avant extraction du seul membre attendu.",
+      "Le dictionnaire distingue type informatique et type statistique. Les montants et l’âge sont quantitatifs ; sexe, études et situation matrimoniale sont des catégories ; les remboursements gardent des codes nominaux explicites. La variable y est binaire.",
+      "Aucune cellule brute vide ; cela ne garantit pas une complétude sémantique. Les codes EDUCATION 0/5/6 deviennent unknown_code (345 lignes) sans inventer leur sens. MARRIAGE=0 apparaît 54 fois. Les montants de facture négatifs sont comptés et conservés, car un solde créditeur peut être légitime.",
+      "Les 35 répétitions exactes hors ID sont signalées sans suppression arbitraire. Les groupes de séparation sont calculés sur les 21 entrées réellement utilisées, sans cible : ils ne prouvent pas qu’il s’agit des mêmes personnes. Les extrêmes de Tukey sont descriptifs, sans winsorisation automatique."
+    ],
+    "table": [
+      [
+        "Contrôle",
+        "Résultat"
+      ],
+      [
+        "Observations / colonnes source",
+        "30 000 / 25"
+      ],
+      [
+        "Défauts / taux",
+        "6 636 / 22,12 %"
+      ],
+      [
+        "Prédicteurs du modèle",
+        "14 quantitatifs + 7 catégoriels"
+      ],
+      [
+        "Variables exclues",
+        "ID, SEX, MARRIAGE, cible et métadonnées"
+      ]
+    ],
+    "figure": null
+  },
+  {
+    "title": "Architecture locale et sécurité",
+    "paragraphs": [
+      "Le volume tient dans un traitement tabulaire local. Python 3.12, pandas, SciPy et scikit-learn évitent un cluster inutile. Les sources entrent dans un pipeline de qualité, puis les lots, l’exploration, les modèles et les indicateurs produisent des artefacts Parquet/JSON. Dash ne lit que le dernier run complet publié atomiquement.",
+      "Le projet Compose rncp-bc2-v1 a ses propres répertoires, réseau et volume de poids. Aucun module, service, modèle ni secret BC1 n’est utilisé. Les services BC1 ont été arrêtés sans effacer leurs volumes avant les mesures.",
+      "Le traitement utilise deux threads et une limite de 2 Gio par service applicatif ; Ollama est limité à 4 Gio. Le dashboard est exposé seulement sur 127.0.0.1:8052. Ollama n’a pas de port hôte et le cloud Ollama est désactivé. Les téléchargements initiaux ont besoin du réseau ; aucune API payante n’est utilisée.",
+      "Le runtime applicatif est non-root, sans capacités Linux, avec système de fichiers en lecture seule et /tmp borné. Les filtres sont validés, le CSV est une route fixe, aucun upload ni désérialiseur arbitraire n’est proposé. Les réponses portent nosniff, DENY et no-referrer.",
+      "Ce serveur Dash est une démonstration locale, sans authentification ni garantie de disponibilité de production. Les vues métier sont des modes de lecture, pas des droits d’accès. Une mise en service exposée demanderait un serveur adapté, TLS, authentification, contrôle des accès et revue de sécurité. Aucun secret n’est inclus dans la remise."
+    ],
+    "table": [
+      [
+        "Composant",
+        "Alternative et raison du choix"
+      ],
+      [
+        "pandas / scikit-learn",
+        "Spark inutile pour 30 000 lignes"
+      ],
+      [
+        "Parquet / JSON",
+        "Base serveur non nécessaire au dossier local"
+      ],
+      [
+        "Dash / Plotly",
+        "Interactions réelles et tableaux HTML"
+      ],
+      [
+        "Qwen3 local quantifié",
+        "Pas d’envoi à une API distante"
+      ]
+    ],
+    "figure": null
+  },
+  {
+    "title": "Protocole expérimental sans fuite",
+    "paragraphs": [
+      "Les profils identiques sont affectés ensemble par StratifiedGroupKFold, cinq plis, graine 42. Un pli devient test, un pli validation et trois plis train. Aucune transformation n’est ajustée sur validation ou test. L’absence de dates individuelles interdit de présenter cette séparation comme une validation temporelle.",
+      "Dans chaque pipeline, l’imputation médiane et la standardisation des variables quantitatives, puis l’imputation et le OneHotEncoder des catégories, sont ajustés sur le train du pli. Les catégories inconnues sont acceptées sans recalcul des paramètres. Les données brutes ne sont pas utilisées comme features supplémentaires.",
+      "Trois plis groupés internes comparent deux configurations par famille : logistique C=0,1/1 ; arbre profondeur 4/8 ; forêt profondeur 6/12, 80 arbres. La moyenne d’average precision interne retient une configuration de chaque famille. Une constante constitue le témoin.",
+      "Le modèle final est choisi par average precision sur validation. Chaque seuil est recherché de 0,05 à 0,95 pour maximiser F2 sur validation. L’importance accordée au rappel est un choix de projet ; ce n’est pas un seuil RNCP imposé. Le fichier selection-before-test.json est enregistré et son empreinte contrôlée avant et après le test.",
+      "Les métriques du test sont calculées ensuite, sans réglage sur leurs résultats. Un bootstrap de 150 rééchantillonnages de groupes, modèle et seuil fixes, décrit l’incertitude sur cette cohorte. Il n’établit pas une généralisation vers une autre banque ou une autre période."
+    ],
+    "table": [
+      [
+        "Lot",
+        "Lignes",
+        "Défauts",
+        "Groupes"
+      ],
+      [
+        "train",
+        "18000",
+        "3982",
+        "17932"
+      ],
+      [
+        "validation",
+        "6000",
+        "1327",
+        "5977"
+      ],
+      [
+        "test",
+        "6000",
+        "1327",
+        "5967"
+      ]
+    ],
+    "figure": null
+  },
+  {
+    "title": "Exploration et tests statistiques",
+    "paragraphs": [
+      "Les statistiques descriptives portent sur les 18 000 lignes du train : effectifs, moyenne, écart-type, variance échantillonnale, médiane, quartiles, étendue et IQR. Les distributions et boxplots rendent visibles l’asymétrie et les valeurs éloignées. Aucune ligne n’est supprimée pour améliorer les scores.",
+      "Pearson décrit une association linéaire ; Spearman compare les rangs et complète la lecture lorsque les montants sont asymétriques. Les matrices du train sont exportées dans pearson.csv et spearman.csv. Les factures des mois voisins sont fortement liées ; cela motive une analyse de redondance, sans prouver un mécanisme causal.",
+      "Les tables croisées sont soumises au Chi² seulement si toutes les fréquences attendues sont au moins cinq. Pour plusieurs codes de remboursement rares, la p-value est retenue comme non publiée : une approximation asymptotique ne suffit pas. Cramér V est également calculé.",
+      "Les moyennes entre défaut/non-défaut sont comparées par Welch, sans hypothèse de variances égales. Les différences standardisées complètent les p-values. Une ANOVA de Welch compare les plafonds selon les études. L’indépendance des personnes demeure une hypothèse, limitée par les profils répétés et le mode d’échantillonnage.",
+      "Benjamini–Hochberg corrige les tests au sein de chaque famille, sans transformer une association en causalité. Par exemple AGE a une p-value ajustée de 0,431 dans le test de moyenne ; une absence de rejet ne démontre pas l’absence de tout effet de l’âge."
+    ],
+    "table": null,
+    "figure": "univariate.png"
+  },
+  {
+    "title": "ACP, AFD et calibration",
+    "paragraphs": [
+      "L’ACP est ajustée sur les 14 variables quantitatives après imputation et centrage-réduction appris sur train. Huit composantes expliquent au moins 90 % de variance. Le fichier projections.json contient les vecteurs propres, les ratios de variance et l’erreur de reconstruction complète, contrôlée numériquement.",
+      "Les contributions par variable sont les carrés des coefficients des axes normalisés ; leur ordre figure dans statistical-supplement.json. L’ACP résume la variance des entrées, sans optimiser la prédiction du défaut. La colinéarité des montants explique une partie de la réduction obtenue.",
+      "L’AFD est supervisée : avec deux classes, elle possède un seul axe discriminant. Le solveur eigen avec shrinkage automatique est appris sur train ; la validation est projetée sans réapprentissage. Les 600 points affichés sont un échantillon déterministe du train, pas l’ensemble des clients.",
+      "Les projections servent à l’exploration ; les quatre modèles sont entraînés sur le pipeline des 21 entrées, sans sélection a posteriori d’axes sur test. La calibration est décrite par huit groupes quantiles de scores ; aucun calibrateur n’est ajusté sur le test. Un score ne doit donc pas être présenté comme une probabilité opérationnelle certifiée."
+    ],
+    "table": null,
+    "figure": "projections-calibration.png"
+  },
+  {
+    "title": "Modèles, erreurs et ressources",
+    "paragraphs": [
+      "La forêt de profondeur 12 est retenue sur validation avec un seuil de 0,15. Sur test : TP=1 071, FP=2 063, TN=2 610 et FN=256. L’intervalle bootstrap à 95 % du rappel est [78,78 % ; 82,46 %], et celui de la précision [32,47 % ; 36,09 %]. Ces intervalles portent sur le modèle fixé et cette cohorte.",
+      "La logistique obtient une average precision très proche sur test (0,5437 contre 0,5466). Cette observation ne sert pas à changer le gagnant après consultation du test. La logistique reste une alternative plus simple à examiner dans une nouvelle validation indépendante.",
+      "La forêt présente un écart d’average precision train/validation de 0,6386 à 0,5626 ; la profondeur et les tailles minimales de feuilles bornent la complexité sans supprimer le surapprentissage. Le témoin constant au seuil choisi classe toutes les observations positives : son rappel de 100 % est accompagné d’une précision égale à la prévalence.",
+      "Les temps entraînement+CV du run baseline sont 0,81 s / 2,96 s / 2,19 s / 6,30 s pour constante/logistique/arbre/forêt. Le pic RAM est cumulatif au processus : il ne mesure pas un surcoût isolé par modèle. Le temps CPU est mesuré ; l’énergie en est estimée par la méthode Green Algorithms (Intel i9-9980HK, 45 W pour 8 cœurs ; 19,6 g CO2e/kWh, RTE 2025) : 0,032 Wh pour les quatre modèles, 0,12 Wh au plus pour le run complet et 0,21 Wh au plus par synthèse LLM, soit 6,6 fois l’entraînement. Estimation, pas mesure par capteur (docs/evidence/energy/estimate-20261123.json). Les 3 087 unités FN×4+FP illustrent un scénario de coût, sans mesure monétaire.",
+      "Le rappel observé par groupe SEX est 83,21 % pour le code 1 et 78,88 % pour le code 2. Cette différence descriptive ne constitue pas un audit causal d’équité. SEX et MARRIAGE sont exclus du modèle, mais AGE est conservé et d’autres variables peuvent porter des proxys."
+    ],
+    "table": [
+      [
+        "Modèle",
+        "AP",
+        "ROC-AUC",
+        "Précision",
+        "Rappel",
+        "F1"
+      ],
+      [
+        "Constante",
+        "0.2212",
+        "0.5000",
+        "0.2212",
+        "1.0000",
+        "0.3622"
+      ],
+      [
+        "Logistique",
+        "0.5437",
+        "0.7652",
+        "0.3527",
+        "0.7604",
+        "0.4819"
+      ],
+      [
+        "Arbre",
+        "0.5073",
+        "0.7598",
+        "0.2534",
+        "0.9488",
+        "0.3999"
+      ],
+      [
+        "Forêt",
+        "0.5466",
+        "0.7798",
+        "0.3417",
+        "0.8071",
+        "0.4802"
+      ]
+    ],
+    "figure": null
+  },
+  {
+    "title": "Cotations financières réelles",
+    "paragraphs": [
+      "Une seconde source indépendante illustre l’acquisition financière : l’API TIME_SERIES_DAILY d’Alpha Vantage, clé publique de démonstration, symbole IBM. Le cache contient 100 séances du 1er juillet au 19 novembre 2026. Yahoo avait renvoyé HTTP 429 ; cet échec a été conservé, sans contournement.",
+      "Le contrat vérifie les dates uniques, prix finis et positifs, cohérence des bornes OHLC et volume non négatif. La réponse ne fournit pas de devise : aucun libellé monétaire n’est inventé. Les prix bruts ne sont pas ajustés des dividendes et ne constituent pas un rendement total.",
+      "Les indicateurs sont le rendement journalier, le rendement logarithmique, la base 100, le drawdown et la volatilité glissante sur 20 rendements logarithmiques, annualisée par la convention racine de 252. Les jours sans séance ne sont pas remplis.",
+      "Sur cette fenêtre, le cours brut varie de −21,79 % ; le drawdown maximal atteint −32,78 %. La corrélation de Spearman rendement/volume est 0,0569. Ces valeurs ne sont ni une prévision ni un conseil d’investissement. Aucune jointure n’est faite avec la cohorte clients de 2005.",
+      "Usage personnel et de recherche non commercial suivant les conditions du fournisseur. Les bruts de cotation sont exclus de l’archive de remise. Le cache porte une empreinte et une date ; une acquisition future peut être différente ou indisponible. Le point de démonstration n’est pas un SLA."
+    ],
+    "table": null,
+    "figure": "market.png"
+  },
+  {
+    "title": "Contexte macro-économique du crédit",
+    "paragraphs": [
+      "La cotation IBM montre l’acquisition d’une source financière, mais elle n’éclaire pas le risque de crédit. J’ai donc ajouté cinq séries publiques de la Réserve fédérale, téléchargées depuis FRED sans clé : retards de paiement et pertes sur cartes de crédit des banques américaines, taux d’intérêt des cartes, taux d’État à 10 ans et cours du dollar taïwanais. Chaque fichier est mis en cache une seule fois, jamais écrasé, et son empreinte est enregistrée.",
+      "Objectif : situer la période observée de la cohorte (avril à septembre 2005) dans un historique long, sans aucune jointure avec les clients. Pendant cette fenêtre, les retards sur cartes US valaient en moyenne 3,79 % des encours, soit un rang de 49 % dans leur historique depuis 1991 : un niveau médian. Les pertes valaient 4,30 % (rang 61 %) et le dollar taïwanais 31,83 TWD/USD (rang 60 %). La cohorte n’a donc pas été observée dans un contexte de crise du crédit américain. Un pic ponctuel des pertes apparaît juste après la fenêtre, fin 2005, et le grand pic de 2009–2010 arrive plus tard.",
+      "Sur 127 trimestres communs (1994–2026), la corrélation de Spearman entre variations trimestrielles des retards et des pertes vaut 0,47 ; celles avec le taux à 10 ans restent proches de zéro (-0,03). Les corrélations sont calculées sur les variations et non sur les niveaux, pour limiter les associations dues à des tendances communes. Elles décrivent une association, pas une causalité.",
+      "Limites : ces séries décrivent le système bancaire américain et un taux de change, pas les clients taïwanais de la cohorte. Les valeurs manquantes FRED sont conservées sans remplissage. Le dashboard présente ces séries avec la fenêtre 2005 grisée, trois périodes d’affichage, une synthèse, la matrice de corrélation et un export CSV ; un contrôle Chromium et axe dédié ne relève aucune violation."
+    ],
+    "table": null,
+    "figure": "macro.png"
+  },
+  {
+    "title": "Dashboard et accessibilité",
+    "paragraphs": [
+      "Le dashboard local propose une exploration par études, code de remboursement ou sexe descriptif, puis des filtres d’âge. Les tables donnent effectifs, défauts et taux exacts ; les modèles restent évalués sur leur test réservé, sans recalcul opportuniste au changement de filtre.",
+      "Trois vues de consultation répondent à des usages distincts : direction (périmètre du pilote), risques (fausses alertes et défauts manqués), analyse (qualité et protocole). Elles n’implémentent aucune authentification. Les cotations changent d’indicateur sans appel réseau supplémentaire.",
+      "Le parcours Chromium vérifie le lien d’évitement au clavier, les filtres 50–60 ans (2 408 lignes), la borne invalide, les vues métier, le drawdown et le véritable appel génératif depuis le bouton. Le navigateur ne relève aucune erreur JavaScript.",
+      "Les composants Dash 4.5 introduisaient des attributs ARIA incohérents. Une correction JavaScript ciblée restaure les noms et la sémantique sans désactiver l’interaction. Axe 4.11 ne signale plus de violation sur le parcours WCAG 2/2.1 A/AA testé ; un contrôle reste incomplet. Il ne s’agit pas d’une certification exhaustive.",
+      "Complément d’accessibilité : la matrice de Spearman et les points ACP/AFD sont téléchargeables en CSV, un tableau donne les quartiles AFD par classe et les classes ACP se distinguent par symbole et couleur. Les captures 1 440 px et 390 px ont été réellement produites et inspectées. Le mobile ne déborde pas globalement ; les tables larges défilent dans leur région. Les graphiques restent accompagnés de textes et de données tabulaires. La revue avec technologies d’assistance et utilisateurs reste à organiser."
+    ],
+    "table": [
+      [
+        "Preuve",
+        "Emplacement"
+      ],
+      [
+        "Rapport navigateur",
+        "docs/evidence/browser/browser-checks.json"
+      ],
+      [
+        "Capture bureau",
+        "docs/evidence/browser/dashboard-desktop.png"
+      ],
+      [
+        "Capture mobile",
+        "docs/evidence/browser/dashboard-mobile.png"
+      ],
+      [
+        "Adresse de démonstration",
+        "http://127.0.0.1:8052"
+      ]
+    ],
+    "figure": null
+  },
+  {
+    "title": "IA générative : comparaison et limites",
+    "paragraphs": [
+      "Qwen3:1.7b est exécuté localement dans Ollama, poids publics quantifiés sous Apache 2.0, digest épinglé et contrôlé avant chaque appel. Le modèle ne reçoit ni ID ni ligne client. Le contexte v2 ne contient que des faits qualitatifs autorisés ; les chiffres restent affichés par le logiciel dans les tableaux.",
+      "Le schéma JSON impose summary, limits et evidence_ids. Les références doivent appartenir au contexte, les textes sont bornés, les chiffres/HTML/coordonnées et certaines formulations sont refusés ; les limites historiques et la relecture humaine sont obligatoires. Ces garde-fous syntaxiques ne vérifient pas la fidélité sémantique complète.",
+      "Au développement v1, quatre réponses avec valeurs chiffrées ont été refusées ; les traces brutes sont conservées. Le contexte qualitatif v2 a ensuite été validé sur un cas de développement distinct. Les cas qualité et ressources ont été figés avant les appels finaux, graine 42, températures 0,1 et 0,4 ; le réglage 0,1 avait été choisi avant ces essais.",
+      "Les quatre appels réservés passent les contrôles automatiques, en 12,55 à 21,75 secondes. Deux gabarits déterministes passent également et sont beaucoup plus rapides. La couverture des références, les tokens et une longueur moyenne de phrase sont tracés. Cette dernière est un proxy, pas une note validée de clarté ou d’inclusivité.",
+      "Une réponse de démonstration emploie une formulation ambiguë « modèle validé, non testé » alors que les performances du test sont disponibles : le garde syntaxique ne suffit pas. La relecture humaine peut corriger ou rejeter le brouillon. Aucune appréciation métier/humaine n’est inventée. Le gabarit classique reste une alternative sobre quand la flexibilité rédactionnelle n’apporte rien."
+    ],
+    "table": [
+      [
+        "Méthode",
+        "Cas",
+        "Validité mesurée",
+        "Limite"
+      ],
+      [
+        "Gabarit",
+        "2",
+        "2 contrôles réussis",
+        "Texte fixe"
+      ],
+      [
+        "LLM température 0,1",
+        "2",
+        "2 contrôles réussis",
+        "Relecture requise"
+      ],
+      [
+        "LLM température 0,4",
+        "2",
+        "2 contrôles réussis",
+        "Petit échantillon"
+      ],
+      [
+        "Revue humaine",
+        "À réaliser",
+        "Aucune note fournie",
+        "Clarté, pertinence, équité"
+      ]
+    ],
+    "figure": null
+  },
+  {
+    "title": "Stratégie IA bancaire et conduite du changement",
+    "paragraphs": [
+      "Le cas prioritaire est un outil d’analyse du risque historique, avec revue humaine et comparaison des erreurs. Une automatisation du crédit est hors périmètre. La valeur attendue est une meilleure compréhension des alertes et de la charge de travail ; aucun gain financier n’est démontré.",
+      "Phase pilote proposée : responsable risques et data analyst examinent le protocole, les coûts FN/FP et la disponibilité de données récentes autorisées. Le DPO et la sécurité qualifient finalité, minimisation, accès, conservation et obligations applicables avant usage de données personnelles réelles. Ces rôles sont proposés, aucune réunion n’a eu lieu.",
+      "Avant tout passage opérationnel : définir le moment de prédiction et des coûts réels, constituer un jeu temporel externe, auditer l’équité avec des effectifs suffisants, vérifier la calibration et dimensionner la revue. Les seuils de passage sont à approuver par les parties prenantes, pas décidés par le seul score.",
+      "Le pilote devra suivre qualité et changements de distribution, puis performance lorsque les labels arrivent. Une dérive déclenche une revue ; elle ne justifie pas un réentraînement aveugle. Une nouvelle version conserve source, code, paramètres, métriques et possibilité de retour au modèle antérieur ou au traitement manuel.",
+      "La formation des utilisateurs distingue probabilité, seuil, rappel et précision ; explique les fausses alertes ; rappelle les limites historiques et la nécessité de contester une conclusion. Les textes générés restent des brouillons modifiables, sans envoi ni décision automatique. La sobriété favorise les traitements à la demande et le gabarit si suffisant."
+    ],
+    "table": [
+      [
+        "Jalon proposé",
+        "Condition de passage"
+      ],
+      [
+        "Revue de cadrage",
+        "Accords et finalité documentés"
+      ],
+      [
+        "Validation externe",
+        "Données récentes, lots temporels, coûts et biais"
+      ],
+      [
+        "Pilote supervisé",
+        "Charge humaine et procédure de contestation"
+      ],
+      [
+        "Service contrôlé",
+        "SLA, accès, supervision et retour arrière approuvés"
+      ]
+    ],
+    "figure": null
+  },
+  {
+    "title": "Reproductibilité, preuves et réserves",
+    "paragraphs": [
+      "Le runtime Docker utilise une base par digest et 52 distributions Python verrouillées avec SHA des roues. Les commandes README acquièrent les sources, lancent un nouveau run, démarrent le dashboard et exécutent les tests. Les runs refusent un répertoire déjà existant pour préserver les expériences.",
+      "Le pipeline baseline v2 est terminé en 39,27 secondes. Une exécution indépendante reproduce-20261120-v1 retrouve les partitions et les prédictions test strictement identiques pour les quatre modèles. Les temps peuvent varier sur une même machine ; cette vérification ne garantit pas les mêmes temps sur une autre architecture.",
+      "Lors de la livraison initiale, 27 tests unitaires passaient (39 aujourd’hui, avec le contexte macro et l’estimation d’énergie), puis une intégration vérifie les empreintes des 13 artefacts et les prédictions après rechargement des quatre modèles. L’échec initial de parité de la forêt (2,22e−16) a été corrigé en ordonnant séquentiellement l’inférence ; l’entraînement conserve deux threads. Les traces d’échec ne sont pas effacées.",
+      "Preuves principales : docs/evidence/pipeline/runtime-verification.json ; reproduction.json ; statistical-supplement.json ; baseline-20261120-v2/ ; docs/evidence/generative/evaluation.json ; docs/evidence/browser/browser-checks.json. Les figures sont calculées à partir des artefacts persistés, sans nouveaux réglages.",
+      "Réserves : revues des parties prenantes, appréciation humaine du génératif/accessibilité, soutenance réelle et décision du jury non fournies. Aucune donnée de test, capture, mesure physique d’énergie, validation humaine ou acquisition officielle de compétence n’est inventée.",
+      "Sources : sujet BC2 fourni p. 1–4 ; référentiel fourni p. 7–11 ; UCI doi.org/10.24432/C55S3H ; alphavantage.co/documentation/#daily et /terms_of_service/ ; huggingface.co/Qwen/Qwen3-1.7B ; documentation officielle scikit-learn (Pipeline, StratifiedGroupKFold), SciPy et Ollama. Les exigences, écarts et sources sont résumés dans docs/rapport.md ; les empreintes sont dans docs/evidence/."
+    ],
+    "table": null,
+    "figure": null
+  },
+  {
+    "title": "Usage de l’IA dans la réalisation",
+    "paragraphs": [
+      "J’ai utilisé des assistants d’IA générative (Codex, puis Claude pour les derniers ajouts et la relecture) pour la réécriture des textes, la recherche et le sourçage des références (documentation des outils, sources de données, licences) et l’aide au développement.",
+      "Les résultats cités proviennent des exécutions du projet et renvoient à des fichiers de preuve dans docs/evidence ; j’assume le contenu et sa présentation. Cet usage est distinct du modèle Qwen du prototype, évalué dans la section consacrée à l’IA générative.",
+      "Sources ajoutées le 23 novembre : FRED, séries DRCCLACBS, CORCCACBS, TERMCBCCALLNS, DEXTAUS et DGS10 (Board of Governors of the Federal Reserve System), fred.stlouisfed.org ; empreintes dans docs/evidence/macro/fred-20261123.json."
+    ],
+    "table": null,
+    "figure": null
+  }
+]

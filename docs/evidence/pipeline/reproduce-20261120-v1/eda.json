@@ -1,0 +1,1406 @@
+{
+  "scope": "Training split only; multiple-test correction within test families; associations not causes",
+  "rows": 18000,
+  "univariate": [
+    {
+      "variable": "LIMIT_BAL",
+      "count": 18000.0,
+      "mean": 167799.77777777778,
+      "std": 129349.48560833558,
+      "min": 10000.0,
+      "25%": 50000.0,
+      "50%": 140000.0,
+      "75%": 240000.0,
+      "max": 800000.0,
+      "missing": 0
+    },
+    {
+      "variable": "AGE",
+      "count": 18000.0,
+      "mean": 35.49311111111111,
+      "std": 9.194840615112232,
+      "min": 21.0,
+      "25%": 28.0,
+      "50%": 34.0,
+      "75%": 42.0,
+      "max": 79.0,
+      "missing": 0
+    },
+    {
+      "variable": "BILL_AMT1",
+      "count": 18000.0,
+      "mean": 51373.86088888889,
+      "std": 73771.92017875866,
+      "min": -165580.0,
+      "25%": 3492.75,
+      "50%": 22151.5,
+      "75%": 67735.25,
+      "max": 630458.0,
+      "missing": 0
+    },
+    {
+      "variable": "BILL_AMT2",
+      "count": 18000.0,
+      "mean": 49357.82922222222,
+      "std": 71620.96740833245,
+      "min": -69777.0,
+      "25%": 2912.5,
+      "50%": 20976.0,
+      "75%": 64454.0,
+      "max": 743970.0,
+      "missing": 0
+    },
+    {
+      "variable": "BILL_AMT3",
+      "count": 18000.0,
+      "mean": 47250.92094444444,
+      "std": 69524.17285016173,
+      "min": -157264.0,
+      "25%": 2626.75,
+      "50%": 19972.5,
+      "75%": 60267.5,
+      "max": 855086.0,
+      "missing": 0
+    },
+    {
+      "variable": "BILL_AMT4",
+      "count": 18000.0,
+      "mean": 43345.19655555556,
+      "std": 64699.9625516158,
+      "min": -170000.0,
+      "25%": 2254.75,
+      "50%": 18911.5,
+      "75%": 54519.0,
+      "max": 616836.0,
+      "missing": 0
+    },
+    {
+      "variable": "BILL_AMT5",
+      "count": 18000.0,
+      "mean": 40354.00883333333,
+      "std": 61103.736768749215,
+      "min": -81334.0,
+      "25%": 1745.75,
+      "50%": 17978.5,
+      "75%": 50347.5,
+      "max": 823540.0,
+      "missing": 0
+    },
+    {
+      "variable": "BILL_AMT6",
+      "count": 18000.0,
+      "mean": 38913.317,
+      "std": 59854.752437169154,
+      "min": -339603.0,
+      "25%": 1206.0,
+      "50%": 16782.5,
+      "75%": 49327.0,
+      "max": 699944.0,
+      "missing": 0
+    },
+    {
+      "variable": "PAY_AMT1",
+      "count": 18000.0,
+      "mean": 5578.650055555556,
+      "std": 16494.83515844952,
+      "min": 0.0,
+      "25%": 1000.0,
+      "50%": 2108.5,
+      "75%": 5009.0,
+      "max": 873552.0,
+      "missing": 0
+    },
+    {
+      "variable": "PAY_AMT2",
+      "count": 18000.0,
+      "mean": 6004.957944444444,
+      "std": 22156.834994601733,
+      "min": 0.0,
+      "25%": 845.25,
+      "50%": 2019.5,
+      "75%": 5000.0,
+      "max": 1215471.0,
+      "missing": 0
+    },
+    {
+      "variable": "PAY_AMT3",
+      "count": 18000.0,
+      "mean": 5227.283611111111,
+      "std": 17576.360260827583,
+      "min": 0.0,
+      "25%": 390.0,
+      "50%": 1821.0,
+      "75%": 4574.25,
+      "max": 889043.0,
+      "missing": 0
+    },
+    {
+      "variable": "PAY_AMT4",
+      "count": 18000.0,
+      "mean": 4852.125777777777,
+      "std": 15846.859525176256,
+      "min": 0.0,
+      "25%": 283.75,
+      "50%": 1500.0,
+      "75%": 4050.5,
+      "max": 621000.0,
+      "missing": 0
+    },
+    {
+      "variable": "PAY_AMT5",
+      "count": 18000.0,
+      "mean": 4767.088444444445,
+      "std": 15098.932801461571,
+      "min": 0.0,
+      "25%": 200.0,
+      "50%": 1500.0,
+      "75%": 4100.0,
+      "max": 426529.0,
+      "missing": 0
+    },
+    {
+      "variable": "PAY_AMT6",
+      "count": 18000.0,
+      "mean": 5202.015666666666,
+      "std": 17749.813387693343,
+      "min": 0.0,
+      "25%": 100.0,
+      "50%": 1500.0,
+      "75%": 4000.0,
+      "max": 528666.0,
+      "missing": 0
+    }
+  ],
+  "categorical": [
+    {
+      "variable": "SEX",
+      "level": "1",
+      "n": 7142,
+      "defaults": 1722,
+      "rate": 0.24110893307196862
+    },
+    {
+      "variable": "SEX",
+      "level": "2",
+      "n": 10858,
+      "defaults": 2260,
+      "rate": 0.20814146251611715
+    },
+    {
+      "variable": "EDUCATION",
+      "level": "graduate",
+      "n": 6388,
+      "defaults": 1256,
+      "rate": 0.19661865998747652
+    },
+    {
+      "variable": "EDUCATION",
+      "level": "high_school",
+      "n": 2960,
+      "defaults": 719,
+      "rate": 0.2429054054054054
+    },
+    {
+      "variable": "EDUCATION",
+      "level": "other",
+      "n": 79,
+      "defaults": 5,
+      "rate": 0.06329113924050633
+    },
+    {
+      "variable": "EDUCATION",
+      "level": "university",
+      "n": 8343,
+      "defaults": 1984,
+      "rate": 0.23780414718926046
+    },
+    {
+      "variable": "EDUCATION",
+      "level": "unknown_code",
+      "n": 230,
+      "defaults": 18,
+      "rate": 0.0782608695652174
+    },
+    {
+      "variable": "MARRIAGE",
+      "level": "0",
+      "n": 35,
+      "defaults": 5,
+      "rate": 0.14285714285714285
+    },
+    {
+      "variable": "MARRIAGE",
+      "level": "1",
+      "n": 8113,
+      "defaults": 1890,
+      "rate": 0.23295944779982744
+    },
+    {
+      "variable": "MARRIAGE",
+      "level": "2",
+      "n": 9661,
+      "defaults": 2040,
+      "rate": 0.21115826518993894
+    },
+    {
+      "variable": "MARRIAGE",
+      "level": "3",
+      "n": 191,
+      "defaults": 47,
+      "rate": 0.24607329842931938
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_-1",
+      "n": 3386,
+      "defaults": 573,
+      "rate": 0.1692262256349675
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_-2",
+      "n": 1672,
+      "defaults": 225,
+      "rate": 0.13456937799043062
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_0",
+      "n": 8857,
+      "defaults": 1145,
+      "rate": 0.12927627864965563
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_1",
+      "n": 2227,
+      "defaults": 756,
+      "rate": 0.33947013920071845
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_2",
+      "n": 1576,
+      "defaults": 1088,
+      "rate": 0.6903553299492385
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_3",
+      "n": 196,
+      "defaults": 148,
+      "rate": 0.7551020408163265
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_4",
+      "n": 45,
+      "defaults": 26,
+      "rate": 0.5777777777777777
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_5",
+      "n": 17,
+      "defaults": 8,
+      "rate": 0.47058823529411764
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_6",
+      "n": 5,
+      "defaults": 3,
+      "rate": 0.6
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_7",
+      "n": 4,
+      "defaults": 3,
+      "rate": 0.75
+    },
+    {
+      "variable": "PAY_0",
+      "level": "code_8",
+      "n": 15,
+      "defaults": 7,
+      "rate": 0.4666666666666667
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_-1",
+      "n": 3622,
+      "defaults": 575,
+      "rate": 0.15875207067918276
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_-2",
+      "n": 2307,
+      "defaults": 418,
+      "rate": 0.1811876896402254
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_0",
+      "n": 9452,
+      "defaults": 1521,
+      "rate": 0.16091832416419805
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_1",
+      "n": 17,
+      "defaults": 3,
+      "rate": 0.17647058823529413
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_2",
+      "n": 2304,
+      "defaults": 1299,
+      "rate": 0.5638020833333334
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_3",
+      "n": 201,
+      "defaults": 119,
+      "rate": 0.5920398009950248
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_4",
+      "n": 60,
+      "defaults": 28,
+      "rate": 0.4666666666666667
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_5",
+      "n": 14,
+      "defaults": 7,
+      "rate": 0.5
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_6",
+      "n": 7,
+      "defaults": 5,
+      "rate": 0.7142857142857143
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_7",
+      "n": 15,
+      "defaults": 7,
+      "rate": 0.4666666666666667
+    },
+    {
+      "variable": "PAY_2",
+      "level": "code_8",
+      "n": 1,
+      "defaults": 0,
+      "rate": 0.0
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_-1",
+      "n": 3590,
+      "defaults": 558,
+      "rate": 0.1554317548746518
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_-2",
+      "n": 2476,
+      "defaults": 468,
+      "rate": 0.1890145395799677
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_0",
+      "n": 9437,
+      "defaults": 1655,
+      "rate": 0.17537352972342907
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_1",
+      "n": 1,
+      "defaults": 0,
+      "rate": 0.0
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_2",
+      "n": 2266,
+      "defaults": 1174,
+      "rate": 0.5180935569285083
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_3",
+      "n": 132,
+      "defaults": 71,
+      "rate": 0.5378787878787878
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_4",
+      "n": 49,
+      "defaults": 24,
+      "rate": 0.4897959183673469
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_5",
+      "n": 13,
+      "defaults": 7,
+      "rate": 0.5384615384615384
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_6",
+      "n": 15,
+      "defaults": 7,
+      "rate": 0.4666666666666667
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_7",
+      "n": 19,
+      "defaults": 17,
+      "rate": 0.8947368421052632
+    },
+    {
+      "variable": "PAY_3",
+      "level": "code_8",
+      "n": 2,
+      "defaults": 1,
+      "rate": 0.5
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_-1",
+      "n": 3438,
+      "defaults": 551,
+      "rate": 0.1602675974403723
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_-2",
+      "n": 2649,
+      "defaults": 509,
+      "rate": 0.19214798036995093
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_0",
+      "n": 9788,
+      "defaults": 1814,
+      "rate": 0.18532897425418882
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_2",
+      "n": 1906,
+      "defaults": 975,
+      "rate": 0.5115424973767051
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_3",
+      "n": 112,
+      "defaults": 63,
+      "rate": 0.5625
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_4",
+      "n": 39,
+      "defaults": 21,
+      "rate": 0.5384615384615384
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_5",
+      "n": 25,
+      "defaults": 12,
+      "rate": 0.48
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_6",
+      "n": 3,
+      "defaults": 1,
+      "rate": 0.3333333333333333
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_7",
+      "n": 38,
+      "defaults": 35,
+      "rate": 0.9210526315789473
+    },
+    {
+      "variable": "PAY_4",
+      "level": "code_8",
+      "n": 2,
+      "defaults": 1,
+      "rate": 0.5
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_-1",
+      "n": 3340,
+      "defaults": 552,
+      "rate": 0.16526946107784432
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_-2",
+      "n": 2788,
+      "defaults": 546,
+      "rate": 0.1958393113342898
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_0",
+      "n": 10056,
+      "defaults": 1897,
+      "rate": 0.18864359586316626
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_2",
+      "n": 1612,
+      "defaults": 852,
+      "rate": 0.5285359801488834
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_3",
+      "n": 94,
+      "defaults": 61,
+      "rate": 0.648936170212766
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_4",
+      "n": 56,
+      "defaults": 29,
+      "rate": 0.5178571428571429
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_5",
+      "n": 12,
+      "defaults": 7,
+      "rate": 0.5833333333333334
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_6",
+      "n": 1,
+      "defaults": 1,
+      "rate": 1.0
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_7",
+      "n": 40,
+      "defaults": 36,
+      "rate": 0.9
+    },
+    {
+      "variable": "PAY_5",
+      "level": "code_8",
+      "n": 1,
+      "defaults": 1,
+      "rate": 1.0
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_-1",
+      "n": 3452,
+      "defaults": 592,
+      "rate": 0.17149478563151796
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_-2",
+      "n": 2983,
+      "defaults": 602,
+      "rate": 0.20181025812939993
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_0",
+      "n": 9690,
+      "defaults": 1829,
+      "rate": 0.18875128998968008
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_2",
+      "n": 1664,
+      "defaults": 824,
+      "rate": 0.4951923076923077
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_3",
+      "n": 123,
+      "defaults": 72,
+      "rate": 0.5853658536585366
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_4",
+      "n": 31,
+      "defaults": 18,
+      "rate": 0.5806451612903226
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_5",
+      "n": 10,
+      "defaults": 5,
+      "rate": 0.5
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_6",
+      "n": 15,
+      "defaults": 10,
+      "rate": 0.6666666666666666
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_7",
+      "n": 30,
+      "defaults": 28,
+      "rate": 0.9333333333333333
+    },
+    {
+      "variable": "PAY_6",
+      "level": "code_8",
+      "n": 2,
+      "defaults": 2,
+      "rate": 1.0
+    }
+  ],
+  "tests": [
+    {
+      "variable": "SEX",
+      "test": "chi_square",
+      "statistic": 26.98752075553392,
+      "df": 1,
+      "p_value": 2.047732533577655e-07,
+      "expected_below_5": 0,
+      "cramers_v": 0.03872088207467352,
+      "qualification": "asymptotic test",
+      "p_adjusted_bh": 3.0715988003664825e-07
+    },
+    {
+      "variable": "EDUCATION",
+      "test": "chi_square",
+      "statistic": 82.56019451010224,
+      "df": 4,
+      "p_value": 4.993643417413747e-17,
+      "expected_below_5": 0,
+      "cramers_v": 0.06772501364181079,
+      "qualification": "asymptotic test",
+      "p_adjusted_bh": 1.4980930252241242e-16
+    },
+    {
+      "variable": "MARRIAGE",
+      "test": "chi_square",
+      "statistic": 14.099242972220251,
+      "df": 3,
+      "p_value": 0.0027731316017333444,
+      "expected_below_5": 0,
+      "cramers_v": 0.02798734135702172,
+      "qualification": "asymptotic test",
+      "p_adjusted_bh": 0.002773131601733344
+    },
+    {
+      "variable": "PAY_0",
+      "test": "chi_square",
+      "statistic": 3134.169147902046,
+      "df": 10,
+      "p_value": null,
+      "expected_below_5": 6,
+      "cramers_v": 0.41727749545929305,
+      "qualification": "small expected cells, p-value withheld"
+    },
+    {
+      "variable": "PAY_2",
+      "test": "chi_square",
+      "statistic": 2075.8559801273655,
+      "df": 10,
+      "p_value": null,
+      "expected_below_5": 6,
+      "cramers_v": 0.33959583659005316,
+      "qualification": "small expected cells, p-value withheld"
+    },
+    {
+      "variable": "PAY_3",
+      "test": "chi_square",
+      "statistic": 1540.8302514073675,
+      "df": 10,
+      "p_value": null,
+      "expected_below_5": 7,
+      "cramers_v": 0.29257764889639576,
+      "qualification": "small expected cells, p-value withheld"
+    },
+    {
+      "variable": "PAY_4",
+      "test": "chi_square",
+      "statistic": 1310.1699296766699,
+      "df": 9,
+      "p_value": null,
+      "expected_below_5": 4,
+      "cramers_v": 0.2697910641874014,
+      "qualification": "small expected cells, p-value withheld"
+    },
+    {
+      "variable": "PAY_5",
+      "test": "chi_square",
+      "statistic": 1268.2971247598684,
+      "df": 9,
+      "p_value": null,
+      "expected_below_5": 5,
+      "cramers_v": 0.26544481794819097,
+      "qualification": "small expected cells, p-value withheld"
+    },
+    {
+      "variable": "PAY_6",
+      "test": "chi_square",
+      "statistic": 1075.383978689,
+      "df": 9,
+      "p_value": null,
+      "expected_below_5": 4,
+      "cramers_v": 0.24442494629560854,
+      "qualification": "small expected cells, p-value withheld"
+    },
+    {
+      "variable": "LIMIT_BAL",
+      "test": "welch_t",
+      "statistic": 22.224254632742433,
+      "p_value": 6.591678924160486e-106,
+      "mean_nondefault": 178254.10186902553,
+      "mean_default": 130996.9864389754,
+      "standardized_difference": -0.36960896138666544,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 9.22835049382468e-105
+    },
+    {
+      "variable": "AGE",
+      "test": "welch_t",
+      "statistic": -0.7875697433415537,
+      "p_value": 0.4309787234291522,
+      "mean_nondefault": 35.46347553145955,
+      "mean_default": 35.59743847312908,
+      "standardized_difference": 0.014569221530172281,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 0.4309787234291522
+    },
+    {
+      "variable": "BILL_AMT1",
+      "test": "welch_t",
+      "statistic": 2.727029151551801,
+      "p_value": 0.006407862443444245,
+      "mean_nondefault": 52164.99436438864,
+      "mean_default": 48588.80085384229,
+      "standardized_difference": -0.048484820790892794,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 0.011213759276027429
+    },
+    {
+      "variable": "BILL_AMT2",
+      "test": "welch_t",
+      "statistic": 2.1763059995180667,
+      "p_value": 0.02956815439361823,
+      "mean_nondefault": 49970.08695962334,
+      "mean_default": 47202.47287795078,
+      "standardized_difference": -0.03864641006287777,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 0.041395416151065526
+    },
+    {
+      "variable": "BILL_AMT3",
+      "test": "welch_t",
+      "statistic": 2.259812927546529,
+      "p_value": 0.023865303137596657,
+      "mean_nondefault": 47862.771508061065,
+      "mean_default": 45096.99799095932,
+      "standardized_difference": -0.039785785311514346,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 0.03712380488070591
+    },
+    {
+      "variable": "BILL_AMT4",
+      "test": "welch_t",
+      "statistic": 1.844776157086854,
+      "p_value": 0.06511517781460681,
+      "mean_nondefault": 43812.30874589813,
+      "mean_default": 41700.80210949272,
+      "standardized_difference": -0.03263744910079512,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 0.08287386267313594
+    },
+    {
+      "variable": "BILL_AMT5",
+      "test": "welch_t",
+      "statistic": 1.1486884425417379,
+      "p_value": 0.2507270490321384,
+      "mean_nondefault": 40631.74382936225,
+      "mean_default": 39376.28679055751,
+      "standardized_difference": -0.02054649825188495,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 0.28740896531329824
+    },
+    {
+      "variable": "BILL_AMT6",
+      "test": "welch_t",
+      "statistic": 1.1103711668675171,
+      "p_value": 0.26687975350520554,
+      "mean_nondefault": 39173.08624625482,
+      "mean_default": 37998.84053239578,
+      "standardized_difference": -0.01961835910334121,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 0.28740896531329824
+    },
+    {
+      "variable": "PAY_AMT1",
+      "test": "welch_t",
+      "statistic": 17.042999988943816,
+      "p_value": 1.3417931744099062e-64,
+      "mean_nondefault": 6282.208660293908,
+      "mean_default": 3101.8834756403817,
+      "standardized_difference": -0.19342239971457664,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 9.392552220869344e-64
+    },
+    {
+      "variable": "PAY_AMT2",
+      "test": "welch_t",
+      "statistic": 10.935078443508754,
+      "p_value": 1.0705583371743743e-27,
+      "mean_nondefault": 6720.713154515623,
+      "mean_default": 3485.2551481667506,
+      "standardized_difference": -0.14629019427496062,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 3.74695418011031e-27
+    },
+    {
+      "variable": "PAY_AMT3",
+      "test": "welch_t",
+      "statistic": 10.36024879672136,
+      "p_value": 4.9684447745798e-25,
+      "mean_nondefault": 5787.171565130547,
+      "mean_default": 3256.286790557509,
+      "standardized_difference": -0.14424756021408694,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 1.391164536882344e-24
+    },
+    {
+      "variable": "PAY_AMT4",
+      "test": "welch_t",
+      "statistic": 11.18553462218274,
+      "p_value": 6.581854981890715e-29,
+      "mean_nondefault": 5360.063846483094,
+      "mean_default": 3064.0102963335007,
+      "standardized_difference": -0.14514884261612931,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 3.071532324882334e-28
+    },
+    {
+      "variable": "PAY_AMT5",
+      "test": "welch_t",
+      "statistic": 9.974569944233236,
+      "p_value": 2.5099393688039914e-23,
+      "mean_nondefault": 5232.206377514624,
+      "mean_default": 3129.714465092918,
+      "standardized_difference": -0.1394770212142046,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 5.85652519387598e-23
+    },
+    {
+      "variable": "PAY_AMT6",
+      "test": "welch_t",
+      "statistic": 8.550529805061512,
+      "p_value": 1.4351229752632275e-17,
+      "mean_nondefault": 5709.841061492367,
+      "mean_default": 3414.2968357609243,
+      "standardized_difference": -0.12951094331335838,
+      "qualification": "independent clients assumed; same-profile groups and historical selection limit interpretation",
+      "p_adjusted_bh": 2.870245950526455e-17
+    },
+    {
+      "variable": "LIMIT_BAL by EDUCATION",
+      "test": "welch_anova",
+      "statistic": 338.1431264451225,
+      "p_value": 5.092593588773928e-136,
+      "groups": 5,
+      "qualification": "unequal variances allowed; no causal interpretation",
+      "p_adjusted_bh": 5.092593588773928e-136
+    }
+  ],
+  "correlations": {
+    "pearson": {
+      "LIMIT_BAL": {
+        "LIMIT_BAL": 1.0,
+        "AGE": 0.144997178452752,
+        "BILL_AMT1": 0.28358559052415605,
+        "BILL_AMT2": 0.27756987872122524,
+        "BILL_AMT3": 0.2859818672033218,
+        "BILL_AMT4": 0.2952355586639826,
+        "BILL_AMT5": 0.29743992011611964,
+        "BILL_AMT6": 0.2912315363558413,
+        "PAY_AMT1": 0.19652155050411824,
+        "PAY_AMT2": 0.1867517008801781,
+        "PAY_AMT3": 0.20306116277615638,
+        "PAY_AMT4": 0.19583808392775578,
+        "PAY_AMT5": 0.22298860161523038,
+        "PAY_AMT6": 0.21627444922178343
+      },
+      "AGE": {
+        "LIMIT_BAL": 0.144997178452752,
+        "AGE": 1.0,
+        "BILL_AMT1": 0.05496296229800593,
+        "BILL_AMT2": 0.05402303214123872,
+        "BILL_AMT3": 0.057089840600886635,
+        "BILL_AMT4": 0.05215290570536865,
+        "BILL_AMT5": 0.053032262019592,
+        "BILL_AMT6": 0.05101059972980841,
+        "PAY_AMT1": 0.020894779406102095,
+        "PAY_AMT2": 0.03033242980594869,
+        "PAY_AMT3": 0.025469714248989153,
+        "PAY_AMT4": 0.02682945766347044,
+        "PAY_AMT5": 0.020322023776676735,
+        "PAY_AMT6": 0.018821990800481605
+      },
+      "BILL_AMT1": {
+        "LIMIT_BAL": 0.28358559052415605,
+        "AGE": 0.05496296229800593,
+        "BILL_AMT1": 1.0,
+        "BILL_AMT2": 0.9558971733986448,
+        "BILL_AMT3": 0.902287501757243,
+        "BILL_AMT4": 0.858610784972935,
+        "BILL_AMT5": 0.8298163609606026,
+        "BILL_AMT6": 0.8018109236515137,
+        "PAY_AMT1": 0.14633817656009254,
+        "PAY_AMT2": 0.11127957471478249,
+        "PAY_AMT3": 0.14396283408403673,
+        "PAY_AMT4": 0.1534099497838761,
+        "PAY_AMT5": 0.16859494582574883,
+        "PAY_AMT6": 0.19375823015017038
+      },
+      "BILL_AMT2": {
+        "LIMIT_BAL": 0.27756987872122524,
+        "AGE": 0.05402303214123872,
+        "BILL_AMT1": 0.9558971733986448,
+        "BILL_AMT2": 1.0,
+        "BILL_AMT3": 0.9348070043126362,
+        "BILL_AMT4": 0.8875003594453548,
+        "BILL_AMT5": 0.8574987051214819,
+        "BILL_AMT6": 0.8310690774998031,
+        "PAY_AMT1": 0.26997639763925463,
+        "PAY_AMT2": 0.09908341004380435,
+        "PAY_AMT3": 0.1318253774224786,
+        "PAY_AMT4": 0.14236386985204824,
+        "PAY_AMT5": 0.16523778829309937,
+        "PAY_AMT6": 0.1863792266591017
+      },
+      "BILL_AMT3": {
+        "LIMIT_BAL": 0.2859818672033218,
+        "AGE": 0.057089840600886635,
+        "BILL_AMT1": 0.902287501757243,
+        "BILL_AMT2": 0.9348070043126362,
+        "BILL_AMT3": 1.0,
+        "BILL_AMT4": 0.9268612074365882,
+        "BILL_AMT5": 0.8898765959174513,
+        "BILL_AMT6": 0.8552883558691129,
+        "PAY_AMT1": 0.24160275009140872,
+        "PAY_AMT2": 0.294566390037674,
+        "PAY_AMT3": 0.12131043709604646,
+        "PAY_AMT4": 0.14086014218650295,
+        "PAY_AMT5": 0.17821266654749557,
+        "PAY_AMT6": 0.2004437839986644
+      },
+      "BILL_AMT4": {
+        "LIMIT_BAL": 0.2952355586639826,
+        "AGE": 0.05215290570536865,
+        "BILL_AMT1": 0.858610784972935,
+        "BILL_AMT2": 0.8875003594453548,
+        "BILL_AMT3": 0.9268612074365882,
+        "BILL_AMT4": 1.0,
+        "BILL_AMT5": 0.9394801905451002,
+        "BILL_AMT6": 0.8994924939734558,
+        "PAY_AMT1": 0.2378522713534933,
+        "PAY_AMT2": 0.2295291083812263,
+        "PAY_AMT3": 0.2924512669701249,
+        "PAY_AMT4": 0.12069978698156393,
+        "PAY_AMT5": 0.17401804438039556,
+        "PAY_AMT6": 0.19450793259014024
+      },
+      "BILL_AMT5": {
+        "LIMIT_BAL": 0.29743992011611964,
+        "AGE": 0.053032262019592,
+        "BILL_AMT1": 0.8298163609606026,
+        "BILL_AMT2": 0.8574987051214819,
+        "BILL_AMT3": 0.8898765959174513,
+        "BILL_AMT4": 0.9394801905451002,
+        "BILL_AMT5": 1.0,
+        "BILL_AMT6": 0.9469222552577227,
+        "PAY_AMT1": 0.22585253397277005,
+        "PAY_AMT2": 0.20285824336023642,
+        "PAY_AMT3": 0.23801800370308995,
+        "PAY_AMT4": 0.28507572366454725,
+        "PAY_AMT5": 0.15880282962239353,
+        "PAY_AMT6": 0.17820390203707395
+      },
+      "BILL_AMT6": {
+        "LIMIT_BAL": 0.2912315363558413,
+        "AGE": 0.05101059972980841,
+        "BILL_AMT1": 0.8018109236515137,
+        "BILL_AMT2": 0.8310690774998031,
+        "BILL_AMT3": 0.8552883558691129,
+        "BILL_AMT4": 0.8994924939734558,
+        "BILL_AMT5": 0.9469222552577227,
+        "BILL_AMT6": 1.0,
+        "PAY_AMT1": 0.210551794556653,
+        "PAY_AMT2": 0.17680460032716203,
+        "PAY_AMT3": 0.2124299294882506,
+        "PAY_AMT4": 0.2497994312459304,
+        "PAY_AMT5": 0.3122169126913764,
+        "PAY_AMT6": 0.12060813054464599
+      },
+      "PAY_AMT1": {
+        "LIMIT_BAL": 0.19652155050411824,
+        "AGE": 0.020894779406102095,
+        "BILL_AMT1": 0.14633817656009254,
+        "BILL_AMT2": 0.26997639763925463,
+        "BILL_AMT3": 0.24160275009140872,
+        "BILL_AMT4": 0.2378522713534933,
+        "BILL_AMT5": 0.22585253397277005,
+        "BILL_AMT6": 0.210551794556653,
+        "PAY_AMT1": 1.0,
+        "PAY_AMT2": 0.3137795298574646,
+        "PAY_AMT3": 0.3079088455709269,
+        "PAY_AMT4": 0.24718599556263374,
+        "PAY_AMT5": 0.16555300206345983,
+        "PAY_AMT6": 0.18517058234374323
+      },
+      "PAY_AMT2": {
+        "LIMIT_BAL": 0.1867517008801781,
+        "AGE": 0.03033242980594869,
+        "BILL_AMT1": 0.11127957471478249,
+        "BILL_AMT2": 0.09908341004380435,
+        "BILL_AMT3": 0.294566390037674,
+        "BILL_AMT4": 0.2295291083812263,
+        "BILL_AMT5": 0.20285824336023642,
+        "BILL_AMT6": 0.17680460032716203,
+        "PAY_AMT1": 0.3137795298574646,
+        "PAY_AMT2": 1.0,
+        "PAY_AMT3": 0.2964885016355799,
+        "PAY_AMT4": 0.2259321750745725,
+        "PAY_AMT5": 0.15321326638779603,
+        "PAY_AMT6": 0.19153114429000953
+      },
+      "PAY_AMT3": {
+        "LIMIT_BAL": 0.20306116277615638,
+        "AGE": 0.025469714248989153,
+        "BILL_AMT1": 0.14396283408403673,
+        "BILL_AMT2": 0.1318253774224786,
+        "BILL_AMT3": 0.12131043709604646,
+        "BILL_AMT4": 0.2924512669701249,
+        "BILL_AMT5": 0.23801800370308995,
+        "BILL_AMT6": 0.2124299294882506,
+        "PAY_AMT1": 0.3079088455709269,
+        "PAY_AMT2": 0.2964885016355799,
+        "PAY_AMT3": 1.0,
+        "PAY_AMT4": 0.2551313422187414,
+        "PAY_AMT5": 0.1545969075203977,
+        "PAY_AMT6": 0.16586692601288228
+      },
+      "PAY_AMT4": {
+        "LIMIT_BAL": 0.19583808392775578,
+        "AGE": 0.02682945766347044,
+        "BILL_AMT1": 0.1534099497838761,
+        "BILL_AMT2": 0.14236386985204824,
+        "BILL_AMT3": 0.14086014218650295,
+        "BILL_AMT4": 0.12069978698156393,
+        "BILL_AMT5": 0.28507572366454725,
+        "BILL_AMT6": 0.2497994312459304,
+        "PAY_AMT1": 0.24718599556263374,
+        "PAY_AMT2": 0.2259321750745725,
+        "PAY_AMT3": 0.2551313422187414,
+        "PAY_AMT4": 1.0,
+        "PAY_AMT5": 0.16386973872824745,
+        "PAY_AMT6": 0.1683962331765088
+      },
+      "PAY_AMT5": {
+        "LIMIT_BAL": 0.22298860161523038,
+        "AGE": 0.020322023776676735,
+        "BILL_AMT1": 0.16859494582574883,
+        "BILL_AMT2": 0.16523778829309937,
+        "BILL_AMT3": 0.17821266654749557,
+        "BILL_AMT4": 0.17401804438039556,
+        "BILL_AMT5": 0.15880282962239353,
+        "BILL_AMT6": 0.3122169126913764,
+        "PAY_AMT1": 0.16555300206345983,
+        "PAY_AMT2": 0.15321326638779603,
+        "PAY_AMT3": 0.1545969075203977,
+        "PAY_AMT4": 0.16386973872824745,
+        "PAY_AMT5": 1.0,
+        "PAY_AMT6": 0.15931914227435803
+      },
+      "PAY_AMT6": {
+        "LIMIT_BAL": 0.21627444922178343,
+        "AGE": 0.018821990800481605,
+        "BILL_AMT1": 0.19375823015017038,
+        "BILL_AMT2": 0.1863792266591017,
+        "BILL_AMT3": 0.2004437839986644,
+        "BILL_AMT4": 0.19450793259014024,
+        "BILL_AMT5": 0.17820390203707395,
+        "BILL_AMT6": 0.12060813054464599,
+        "PAY_AMT1": 0.18517058234374323,
+        "PAY_AMT2": 0.19153114429000953,
+        "PAY_AMT3": 0.16586692601288228,
+        "PAY_AMT4": 0.1683962331765088,
+        "PAY_AMT5": 0.15931914227435803,
+        "PAY_AMT6": 1.0
+      }
+    },
+    "spearman": {
+      "LIMIT_BAL": {
+        "LIMIT_BAL": 1.0,
+        "AGE": 0.18901165920494584,
+        "BILL_AMT1": 0.05436834837809114,
+        "BILL_AMT2": 0.04851251872309184,
+        "BILL_AMT3": 0.061349312292086,
+        "BILL_AMT4": 0.07158748529843938,
+        "BILL_AMT5": 0.07935618802539479,
+        "BILL_AMT6": 0.08697741288895201,
+        "PAY_AMT1": 0.27290486861143476,
+        "PAY_AMT2": 0.2815234287210727,
+        "PAY_AMT3": 0.2836171803203461,
+        "PAY_AMT4": 0.2829745929741183,
+        "PAY_AMT5": 0.29831084079638964,
+        "PAY_AMT6": 0.3202608563482875
+      },
+      "AGE": {
+        "LIMIT_BAL": 0.18901165920494584,
+        "AGE": 1.0,
+        "BILL_AMT1": 0.003299286014664767,
+        "BILL_AMT2": 0.0022658968921801474,
+        "BILL_AMT3": 0.005876299400182781,
+        "BILL_AMT4": -7.645408340699364e-05,
+        "BILL_AMT5": 0.0052996238007725575,
+        "BILL_AMT6": 0.005609680027304909,
+        "PAY_AMT1": 0.0355217769023409,
+        "PAY_AMT2": 0.049196381657421503,
+        "PAY_AMT3": 0.03199022088917467,
+        "PAY_AMT4": 0.04471343780509508,
+        "PAY_AMT5": 0.036920727327428814,
+        "PAY_AMT6": 0.041928349990079196
+      },
+      "BILL_AMT1": {
+        "LIMIT_BAL": 0.05436834837809114,
+        "AGE": 0.003299286014664767,
+        "BILL_AMT1": 1.0,
+        "BILL_AMT2": 0.9126320952403064,
+        "BILL_AMT3": 0.8588026185468828,
+        "BILL_AMT4": 0.8067640664476512,
+        "BILL_AMT5": 0.7680824751518385,
+        "BILL_AMT6": 0.7334611409128385,
+        "PAY_AMT1": 0.5005966291966276,
+        "PAY_AMT2": 0.4739222551633916,
+        "PAY_AMT3": 0.4376532325318989,
+        "PAY_AMT4": 0.4401345949749406,
+        "PAY_AMT5": 0.4218174629949879,
+        "PAY_AMT6": 0.4075831984890631
+      },
+      "BILL_AMT2": {
+        "LIMIT_BAL": 0.04851251872309184,
+        "AGE": 0.0022658968921801474,
+        "BILL_AMT1": 0.9126320952403064,
+        "BILL_AMT2": 1.0,
+        "BILL_AMT3": 0.907633887774169,
+        "BILL_AMT4": 0.8465138690000227,
+        "BILL_AMT5": 0.8039541234240387,
+        "BILL_AMT6": 0.7665588794177551,
+        "PAY_AMT1": 0.6339758816581268,
+        "PAY_AMT2": 0.4970927669915963,
+        "PAY_AMT3": 0.46406041960895816,
+        "PAY_AMT4": 0.46265788391059637,
+        "PAY_AMT5": 0.44922222495374375,
+        "PAY_AMT6": 0.4272605343010204
+      },
+      "BILL_AMT3": {
+        "LIMIT_BAL": 0.061349312292086,
+        "AGE": 0.005876299400182781,
+        "BILL_AMT1": 0.8588026185468828,
+        "BILL_AMT2": 0.907633887774169,
+        "BILL_AMT3": 1.0,
+        "BILL_AMT4": 0.9020773171013798,
+        "BILL_AMT5": 0.8489977101998794,
+        "BILL_AMT6": 0.8052070918393284,
+        "PAY_AMT1": 0.5484674372829768,
+        "PAY_AMT2": 0.6390036774548025,
+        "PAY_AMT3": 0.48883741810785036,
+        "PAY_AMT4": 0.49012409355111025,
+        "PAY_AMT5": 0.47773923886777175,
+        "PAY_AMT6": 0.4570793939916938
+      },
+      "BILL_AMT4": {
+        "LIMIT_BAL": 0.07158748529843938,
+        "AGE": -7.645408340699364e-05,
+        "BILL_AMT1": 0.8067640664476512,
+        "BILL_AMT2": 0.8465138690000227,
+        "BILL_AMT3": 0.9020773171013798,
+        "BILL_AMT4": 1.0,
+        "BILL_AMT5": 0.9035018032510782,
+        "BILL_AMT6": 0.84999518644582,
+        "PAY_AMT1": 0.5099976309338626,
+        "PAY_AMT2": 0.5534723577835001,
+        "PAY_AMT3": 0.6310777461192846,
+        "PAY_AMT4": 0.5060444148436845,
+        "PAY_AMT5": 0.5047864186746034,
+        "PAY_AMT6": 0.4782496941908194
+      },
+      "BILL_AMT5": {
+        "LIMIT_BAL": 0.07935618802539479,
+        "AGE": 0.0052996238007725575,
+        "BILL_AMT1": 0.7680824751518385,
+        "BILL_AMT2": 0.8039541234240387,
+        "BILL_AMT3": 0.8489977101998794,
+        "BILL_AMT4": 0.9035018032510782,
+        "BILL_AMT5": 1.0,
+        "BILL_AMT6": 0.9034727932912885,
+        "PAY_AMT1": 0.48235997517532925,
+        "PAY_AMT2": 0.5127804443910267,
+        "PAY_AMT3": 0.5451150491403052,
+        "PAY_AMT4": 0.6456269643957188,
+        "PAY_AMT5": 0.5239344140437775,
+        "PAY_AMT6": 0.504207761843231
+      },
+      "BILL_AMT6": {
+        "LIMIT_BAL": 0.08697741288895201,
+        "AGE": 0.005609680027304909,
+        "BILL_AMT1": 0.7334611409128385,
+        "BILL_AMT2": 0.7665588794177551,
+        "BILL_AMT3": 0.8052070918393284,
+        "BILL_AMT4": 0.84999518644582,
+        "BILL_AMT5": 0.9034727932912885,
+        "BILL_AMT6": 1.0,
+        "PAY_AMT1": 0.45411072655830387,
+        "PAY_AMT2": 0.4850041981615533,
+        "PAY_AMT3": 0.517886378384667,
+        "PAY_AMT4": 0.5686934514378875,
+        "PAY_AMT5": 0.6639242882762836,
+        "PAY_AMT6": 0.5259066857257353
+      },
+      "PAY_AMT1": {
+        "LIMIT_BAL": 0.27290486861143476,
+        "AGE": 0.0355217769023409,
+        "BILL_AMT1": 0.5005966291966276,
+        "BILL_AMT2": 0.6339758816581268,
+        "BILL_AMT3": 0.5484674372829768,
+        "BILL_AMT4": 0.5099976309338626,
+        "BILL_AMT5": 0.48235997517532925,
+        "BILL_AMT6": 0.45411072655830387,
+        "PAY_AMT1": 1.0,
+        "PAY_AMT2": 0.5135815174647979,
+        "PAY_AMT3": 0.5168298759565224,
+        "PAY_AMT4": 0.490811041344927,
+        "PAY_AMT5": 0.47345857210314096,
+        "PAY_AMT6": 0.4581842512656701
+      },
+      "PAY_AMT2": {
+        "LIMIT_BAL": 0.2815234287210727,
+        "AGE": 0.049196381657421503,
+        "BILL_AMT1": 0.4739222551633916,
+        "BILL_AMT2": 0.4970927669915963,
+        "BILL_AMT3": 0.6390036774548025,
+        "BILL_AMT4": 0.5534723577835001,
+        "BILL_AMT5": 0.5127804443910267,
+        "BILL_AMT6": 0.4850041981615533,
+        "PAY_AMT1": 0.5135815174647979,
+        "PAY_AMT2": 1.0,
+        "PAY_AMT3": 0.5111043790575911,
+        "PAY_AMT4": 0.5234142728215333,
+        "PAY_AMT5": 0.4983495231856507,
+        "PAY_AMT6": 0.49477069857043915
+      },
+      "PAY_AMT3": {
+        "LIMIT_BAL": 0.2836171803203461,
+        "AGE": 0.03199022088917467,
+        "BILL_AMT1": 0.4376532325318989,
+        "BILL_AMT2": 0.46406041960895816,
+        "BILL_AMT3": 0.48883741810785036,
+        "BILL_AMT4": 0.6310777461192846,
+        "BILL_AMT5": 0.5451150491403052,
+        "BILL_AMT6": 0.517886378384667,
+        "PAY_AMT1": 0.5168298759565224,
+        "PAY_AMT2": 0.5111043790575911,
+        "PAY_AMT3": 1.0,
+        "PAY_AMT4": 0.515307118664481,
+        "PAY_AMT5": 0.5387369285452979,
+        "PAY_AMT6": 0.5069495716221223
+      },
+      "PAY_AMT4": {
+        "LIMIT_BAL": 0.2829745929741183,
+        "AGE": 0.04471343780509508,
+        "BILL_AMT1": 0.4401345949749406,
+        "BILL_AMT2": 0.46265788391059637,
+        "BILL_AMT3": 0.49012409355111025,
+        "BILL_AMT4": 0.5060444148436845,
+        "BILL_AMT5": 0.6456269643957188,
+        "BILL_AMT6": 0.5686934514378875,
+        "PAY_AMT1": 0.490811041344927,
+        "PAY_AMT2": 0.5234142728215333,
+        "PAY_AMT3": 0.515307118664481,
+        "PAY_AMT4": 1.0,
+        "PAY_AMT5": 0.5308409954921551,
+        "PAY_AMT6": 0.5424935124879147
+      },
+      "PAY_AMT5": {
+        "LIMIT_BAL": 0.29831084079638964,
+        "AGE": 0.036920727327428814,
+        "BILL_AMT1": 0.4218174629949879,
+        "BILL_AMT2": 0.44922222495374375,
+        "BILL_AMT3": 0.47773923886777175,
+        "BILL_AMT4": 0.5047864186746034,
+        "BILL_AMT5": 0.5239344140437775,
+        "BILL_AMT6": 0.6639242882762836,
+        "PAY_AMT1": 0.47345857210314096,
+        "PAY_AMT2": 0.4983495231856507,
+        "PAY_AMT3": 0.5387369285452979,
+        "PAY_AMT4": 0.5308409954921551,
+        "PAY_AMT5": 1.0,
+        "PAY_AMT6": 0.5467228141332006
+      },
+      "PAY_AMT6": {
+        "LIMIT_BAL": 0.3202608563482875,
+        "AGE": 0.041928349990079196,
+        "BILL_AMT1": 0.4075831984890631,
+        "BILL_AMT2": 0.4272605343010204,
+        "BILL_AMT3": 0.4570793939916938,
+        "BILL_AMT4": 0.4782496941908194,
+        "BILL_AMT5": 0.504207761843231,
+        "BILL_AMT6": 0.5259066857257353,
+        "PAY_AMT1": 0.4581842512656701,
+        "PAY_AMT2": 0.49477069857043915,
+        "PAY_AMT3": 0.5069495716221223,
+        "PAY_AMT4": 0.5424935124879147,
+        "PAY_AMT5": 0.5467228141332006,
+        "PAY_AMT6": 1.0
+      }
+    }
+  }
+}

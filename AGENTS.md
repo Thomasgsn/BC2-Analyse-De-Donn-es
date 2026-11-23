@@ -1,0 +1,10 @@
+# Instructions BC2
+
+- Projet autonome actif : BC2. L’utilisateur a autorisé BC2 puis BC3 le 20 novembre 2026 ; travailler successivement, sans commencer BC3 pendant BC2.
+- État actuel : livraison technique locale achevée et vérifiée ; réserves humaines dans `docs/checklist.md` ; historique détaillé archivé dans `../preparation-oral/bc2/docs/`. Développement autorisé par « fait tout » après présentation du plan et du dataset UCI350. Lire `docs/checklist.md` puis `docs/rapport.md` ; progression et plan détaillés archivés dans `../preparation-oral/bc2/docs/`.
+- Avant acquisition ou choix de cible : lire la section Besoin de `docs/rapport.md` et la décision archivée (`../preparation-oral/bc2/docs/dataset-decision.md`). Dataset retenu : UCI Default of Credit Card Clients (cible défaut). Dans les documents de rendu, présenter ce choix sans mention de validation.
+- Pour un écart de périmètre : consulter `docs/rapport.md` (exigences, écarts, correspondance RNCP) et l’audit archivé. Le sujet rend C5 facultatif pédagogiquement ; le référentiel couvre C5.1–C5.3. Distinguer ces niveaux.
+- Tout code, environnement, fichier de données, test et preuve du projet appartient à `bc2/`. Aucun import ou service d’un autre bloc. Les PDF fournis restent dans `.data/`.
+- Livraison locale uniquement : aucun commit, push ou mail. Accord requis avant dépense, publication, destruction ou modification sensible. Secrets hors dépôt.
+- Prétraitement, ACP/AFD et sélection appris sur train uniquement ; décision de modèle/seuil avant test réservé. Identifier données synthétiques et hypothèses, ne jamais reconstruire une date ou un résultat sans preuve.
+- Documenter les résultats réellement exécutés dans `docs/evidence/`, mettre à jour `docs/checklist.md` et, si un résultat change, `docs/rapport.md` (correspondance RNCP comprise). Statuts : Terminé et vérifié ; Implémenté mais non vérifié ; En cours ; Bloqué ; À réaliser. La validation officielle appartient au jury.

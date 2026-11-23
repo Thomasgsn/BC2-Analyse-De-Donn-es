@@ -1,0 +1,78 @@
+{
+  "source_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+  "rows": 30000,
+  "source_columns": 25,
+  "source_explanatory_variables": 23,
+  "model_predictors": [
+    "LIMIT_BAL",
+    "AGE",
+    "BILL_AMT1",
+    "BILL_AMT2",
+    "BILL_AMT3",
+    "BILL_AMT4",
+    "BILL_AMT5",
+    "BILL_AMT6",
+    "PAY_AMT1",
+    "PAY_AMT2",
+    "PAY_AMT3",
+    "PAY_AMT4",
+    "PAY_AMT5",
+    "PAY_AMT6",
+    "EDUCATION",
+    "PAY_0",
+    "PAY_2",
+    "PAY_3",
+    "PAY_4",
+    "PAY_5",
+    "PAY_6"
+  ],
+  "excluded": [
+    "ID",
+    "SEX",
+    "MARRIAGE",
+    "y",
+    "group_id",
+    "split"
+  ],
+  "target_counts": {
+    "0": 23364,
+    "1": 6636
+  },
+  "default_rate": 0.2212,
+  "missing_raw_cells": 0,
+  "negative_bill_cells": 3932,
+  "extra_duplicates_without_id": 35,
+  "unknown_education_codes": {
+    "5": 280,
+    "6": 51,
+    "0": 14
+  },
+  "marriage_code_zero": 54,
+  "rules": [
+    "No row removed; original preserved",
+    "EDUCATION 0/5/6 mapped to explicit unknown_code, raw retained",
+    "Repayment codes kept as nominal code labels without invented meaning",
+    "Negative bill amounts retained and counted, not presumed errors",
+    "SEX and MARRIAGE excluded from prediction, retained for audit",
+    "Groups are SHA256 of actual modeling inputs excluding target; no chronological interpretation of ID"
+  ],
+  "splits": {
+    "train": {
+      "rows": 18000,
+      "positives": 3982,
+      "groups": 17932
+    },
+    "validation": {
+      "rows": 6000,
+      "positives": 1327,
+      "groups": 5977
+    },
+    "test": {
+      "rows": 6000,
+      "positives": 1327,
+      "groups": 5967
+    }
+  },
+  "group_overlap": 0,
+  "scope": "One historical Taiwanese cohort, no temporal out-of-sample validation; teacher approval of changed target not provided"
+}

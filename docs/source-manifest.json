@@ -1,0 +1,20 @@
+[
+  {
+    "id": "SUJET",
+    "file": "../../.data/Projet Analyse des données - Validation Bloc2.pdf",
+    "pages": 4,
+    "sha256": "4bbd497e16e72e0bcc8fba698df7217111ecc36cac6807872e89b4150293e696"
+  },
+  {
+    "id": "REF",
+    "file": "../../.data/Référentiel Expert Ingénierie de données.pdf",
+    "pages": 25,
+    "sha256": "2105a489e863cc23ae065f2af56109c1b0309a37aa56e53cb0a8b6baf0b5109a"
+  },
+  {
+    "id": "INFO",
+    "file": "../../.data/Document d’information RNCP40875 - Expert en ingénierie des données.pdf",
+    "pages": 5,
+    "sha256": "05e630c89911f5e7143deeb7435088000e6d4003428685a056772fedc3d95df7"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "event": "browser_checks",
+  "filter_reference_rows": 2408,
+  "keyboard_skip": true,
+  "invalid_filter_message": true,
+  "market_switch": true,
+  "role_views": true,
+  "real_llm_callback": true,
+  "axe_violations": [],
+  "axe_incomplete": 1,
+  "console_errors": [],
+  "mobile_global_overflow": false,
+  "screenshots": {
+    "dashboard-desktop.png": "c3d8cec1ec90ef6c1a59eadda8f65379208b6ff5f92734b81c87a3ea9e0d5e0e",
+    "dashboard-mobile.png": "7520046aac9c51880f3fe3331353c710cd9b2bdec135922a5e134844f837a2e2"
+  },
+  "axe_script_sha256": "e9e5863c33a874f09bc01acd9234b7e3c871479f5eef8802fa582544465e6d01"
+}

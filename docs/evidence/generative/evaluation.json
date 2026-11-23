@@ -1,0 +1,493 @@
+{
+  "created_at_utc": "2026-11-20T08:34:01.576062+00:00",
+  "run_id": "baseline-20261120-v2",
+  "protocol": "Two fact sets held out from prompt development; qualitative context v2 frozen before these calls; no claimed generalization beyond two cases",
+  "heldout_facts_sha256": "0d7e1ab38de07d616b0c92e72a67611e9bf6cca4b88db9cb6e8fb8da075bdece",
+  "selected_temperature_fixed_before_evaluation": 0.1,
+  "temperatures_compared": [
+    0.1,
+    0.4
+  ],
+  "seed": 42,
+  "cases": [
+    {
+      "case": "quality",
+      "method": "deterministic_template",
+      "valid": true,
+      "elapsed_seconds": 0.0007266640004672809,
+      "output": {
+        "summary": "Le contrôle conserve les observations et distingue les cellules vides des catégories ambiguës. Les codes et profils répétés demandent une documentation avant toute analyse.",
+        "limits": "Ces données historiques ont une portée limitée. Une relecture humaine est nécessaire avant tout usage métier.",
+        "evidence_ids": [
+          "source_integrity",
+          "blank_cells",
+          "coded_categories",
+          "group_separation"
+        ]
+      },
+      "reference_coverage": 0.6666666666666666
+    },
+    {
+      "case": "quality",
+      "method": "llm",
+      "temperature": 0.1,
+      "valid": true,
+      "result": {
+        "created_at_utc": "2026-11-20T08:34:17.823724+00:00",
+        "case": "quality",
+        "status": "draft_requires_human_review",
+        "model": "qwen3:1.7b",
+        "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "prompt_version": "bc2-facts-fr-v2-qualitative-context",
+        "system_sha256": "6d8d28b3afa9d641ab929e31d9012ceb31b32629cc9550ccb45d2e78cf487fbd",
+        "facts_sha256": "29e63775a7ca4852ed4a3dca8fcf8daa88337330e380f41150145f3774fc0170",
+        "model_context": {
+          "source_integrity": {
+            "meaning": "La source originale est conservée et vérifiée par empreinte",
+            "value": "SHA verified"
+          },
+          "blank_cells": {
+            "meaning": "Aucune cellule vide observée, sans garantie que tous les codes soient expliqués"
+          },
+          "coded_categories": {
+            "meaning": "Des codes de catégories doivent être documentés, sans suppression silencieuse",
+            "value": "ambiguous observed categories"
+          },
+          "group_separation": {
+            "meaning": "Les profils identiques sont groupés dans un seul lot pour limiter les fuites"
+          },
+          "historical_scope": {
+            "meaning": "La cohorte est historique, pas un échantillon bancaire actuel",
+            "value": "historical cohort"
+          },
+          "review_requirement": {
+            "meaning": "Une relecture humaine et une validation pédagogique restent nécessaires"
+          }
+        },
+        "model_context_sha256": "6ea53e285071dea65135c1e9d4cbf6836825ae5ad63892720939f05d71332a8a",
+        "facts": {
+          "source_integrity": {
+            "value": "SHA verified",
+            "meaning": "La source originale est conservée et vérifiée par empreinte"
+          },
+          "blank_cells": {
+            "value": 0,
+            "meaning": "Aucune cellule vide observée, sans garantie que tous les codes soient expliqués"
+          },
+          "coded_categories": {
+            "value": "ambiguous observed categories",
+            "meaning": "Des codes de catégories doivent être documentés, sans suppression silencieuse"
+          },
+          "group_separation": {
+            "value": 0,
+            "meaning": "Les profils identiques sont groupés dans un seul lot pour limiter les fuites"
+          },
+          "historical_scope": {
+            "value": "historical cohort",
+            "meaning": "La cohorte est historique, pas un échantillon bancaire actuel"
+          },
+          "review_requirement": {
+            "value": true,
+            "meaning": "Une relecture humaine et une validation pédagogique restent nécessaires"
+          }
+        },
+        "output": {
+          "summary": "La cohorte est historique, avec des données vérifiées par empreinte (SHA verified). Il n'y a pas de cellules vides, mais les catégories sont ambigues. Les profils identiques sont groupés pour éviter les fuites. Une relecture humaine et une validation pédagogique sont nécessaires.",
+          "limits": "Les données sont historiques, et une relecture humaine est nécessaire.",
+          "evidence_ids": [
+            "source_integrity",
+            "blank_cells",
+            "coded_categories",
+            "group_separation",
+            "historical_scope",
+            "review_requirement"
+          ]
+        },
+        "request_options": {
+          "num_ctx": 2048,
+          "num_batch": 64,
+          "num_thread": 2,
+          "num_predict": 360,
+          "seed": 42,
+          "temperature": 0.1,
+          "repeat_penalty": 1.1
+        },
+        "think": false,
+        "elapsed_seconds": 16.218722066999362,
+        "timing_ns": {
+          "total_duration": 16204324723,
+          "load_duration": 4118020,
+          "prompt_eval_duration": 4073236000,
+          "eval_duration": 12068190000
+        },
+        "tokens": {
+          "prompt_eval_count": 398,
+          "eval_count": 145
+        },
+        "email_sent": false,
+        "validation_scope": "Schema, fact references, numeric invention markers, limited language guards; not semantic correctness or human review"
+      },
+      "reference_coverage": 1.0,
+      "mean_words_per_sentence_proxy": 10.5,
+      "proxy_limit": "Sentence length is not a validated clarity score; lexical guards do not prove inclusivity or business accuracy"
+    },
+    {
+      "case": "quality",
+      "method": "llm",
+      "temperature": 0.4,
+      "valid": true,
+      "result": {
+        "created_at_utc": "2026-11-20T08:34:30.384821+00:00",
+        "case": "quality",
+        "status": "draft_requires_human_review",
+        "model": "qwen3:1.7b",
+        "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "prompt_version": "bc2-facts-fr-v2-qualitative-context",
+        "system_sha256": "6d8d28b3afa9d641ab929e31d9012ceb31b32629cc9550ccb45d2e78cf487fbd",
+        "facts_sha256": "29e63775a7ca4852ed4a3dca8fcf8daa88337330e380f41150145f3774fc0170",
+        "model_context": {
+          "source_integrity": {
+            "meaning": "La source originale est conservée et vérifiée par empreinte",
+            "value": "SHA verified"
+          },
+          "blank_cells": {
+            "meaning": "Aucune cellule vide observée, sans garantie que tous les codes soient expliqués"
+          },
+          "coded_categories": {
+            "meaning": "Des codes de catégories doivent être documentés, sans suppression silencieuse",
+            "value": "ambiguous observed categories"
+          },
+          "group_separation": {
+            "meaning": "Les profils identiques sont groupés dans un seul lot pour limiter les fuites"
+          },
+          "historical_scope": {
+            "meaning": "La cohorte est historique, pas un échantillon bancaire actuel",
+            "value": "historical cohort"
+          },
+          "review_requirement": {
+            "meaning": "Une relecture humaine et une validation pédagogique restent nécessaires"
+          }
+        },
+        "model_context_sha256": "6ea53e285071dea65135c1e9d4cbf6836825ae5ad63892720939f05d71332a8a",
+        "facts": {
+          "source_integrity": {
+            "value": "SHA verified",
+            "meaning": "La source originale est conservée et vérifiée par empreinte"
+          },
+          "blank_cells": {
+            "value": 0,
+            "meaning": "Aucune cellule vide observée, sans garantie que tous les codes soient expliqués"
+          },
+          "coded_categories": {
+            "value": "ambiguous observed categories",
+            "meaning": "Des codes de catégories doivent être documentés, sans suppression silencieuse"
+          },
+          "group_separation": {
+            "value": 0,
+            "meaning": "Les profils identiques sont groupés dans un seul lot pour limiter les fuites"
+          },
+          "historical_scope": {
+            "value": "historical cohort",
+            "meaning": "La cohorte est historique, pas un échantillon bancaire actuel"
+          },
+          "review_requirement": {
+            "value": true,
+            "meaning": "Une relecture humaine et une validation pédagogique restent nécessaires"
+          }
+        },
+        "output": {
+          "summary": "La cohorte est historique, avec des données vérifiées par empreinte (SHA verified). Il n'y a pas de cellules vides, mais les catégories sont ambigues. Les profils identiques sont groupés pour réduire les fuites. Une relecture humaine et une validation pédagogique sont nécessaires.",
+          "limits": "Les données sont historiques et une relecture humaine est nécessaire.",
+          "evidence_ids": [
+            "source_integrity",
+            "blank_cells",
+            "coded_categories",
+            "group_separation",
+            "historical_scope",
+            "review_requirement"
+          ]
+        },
+        "request_options": {
+          "num_ctx": 2048,
+          "num_batch": 64,
+          "num_thread": 2,
+          "num_predict": 360,
+          "seed": 42,
+          "temperature": 0.4,
+          "repeat_penalty": 1.1
+        },
+        "think": false,
+        "elapsed_seconds": 12.55203906099996,
+        "timing_ns": {
+          "total_duration": 12542555788,
+          "load_duration": 2429646,
+          "prompt_eval_duration": 75125000,
+          "eval_duration": 12453649000
+        },
+        "tokens": {
+          "prompt_eval_count": 398,
+          "eval_count": 145
+        },
+        "email_sent": false,
+        "validation_scope": "Schema, fact references, numeric invention markers, limited language guards; not semantic correctness or human review"
+      },
+      "reference_coverage": 1.0,
+      "mean_words_per_sentence_proxy": 10.5,
+      "proxy_limit": "Sentence length is not a validated clarity score; lexical guards do not prove inclusivity or business accuracy"
+    },
+    {
+      "case": "resources",
+      "method": "deterministic_template",
+      "valid": true,
+      "elapsed_seconds": 6.688600024062907e-05,
+      "output": {
+        "summary": "Les modèles ont été comparés selon un protocole de validation commun. Le temps de calcul et la mémoire apportent une lecture des ressources, distincte de la qualité prédictive.",
+        "limits": "Ces données historiques ont une portée limitée. Une relecture humaine est nécessaire avant tout usage métier.",
+        "evidence_ids": [
+          "selection_protocol",
+          "selected_model",
+          "measured_time",
+          "memory_scope"
+        ]
+      },
+      "reference_coverage": 0.5714285714285714
+    },
+    {
+      "case": "resources",
+      "method": "llm",
+      "temperature": 0.1,
+      "valid": true,
+      "result": {
+        "created_at_utc": "2026-11-20T08:34:52.146113+00:00",
+        "case": "resources",
+        "status": "draft_requires_human_review",
+        "model": "qwen3:1.7b",
+        "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "prompt_version": "bc2-facts-fr-v2-qualitative-context",
+        "system_sha256": "6d8d28b3afa9d641ab929e31d9012ceb31b32629cc9550ccb45d2e78cf487fbd",
+        "facts_sha256": "91fa7b04a87438ac3c72fe2ea45b70a83cb3ab8831cba55c0b66bcc20545294d",
+        "model_context": {
+          "selection_protocol": {
+            "meaning": "Le modèle est choisi sur validation, pas sur le test",
+            "value": "validation average precision"
+          },
+          "selected_model": {
+            "meaning": "Famille retenue dans le protocole mesuré",
+            "value": "forest"
+          },
+          "measured_time": {
+            "meaning": "Le temps calculé inclut entraînement et validation croisée sur ce poste"
+          },
+          "memory_scope": {
+            "meaning": "Le pic mémoire est cumulatif au processus, pas un coût isolé de chaque modèle"
+          },
+          "energy_limit": {
+            "meaning": "Aucune mesure énergétique ou carbone, les indicateurs de calcul ne sont que des proxys",
+            "value": "not measured"
+          },
+          "historical_scope": {
+            "meaning": "Les mesures portent sur une cohorte historique et un environnement local",
+            "value": "historical data"
+          },
+          "review_requirement": {
+            "meaning": "Relecture humaine nécessaire pour décider du compromis qualité et ressources"
+          }
+        },
+        "model_context_sha256": "41ae27e7e8831efc940ac5bd4d15f76b616a3f34562ba6a6f4929ef065ed29ec",
+        "facts": {
+          "selection_protocol": {
+            "value": "validation average precision",
+            "meaning": "Le modèle est choisi sur validation, pas sur le test"
+          },
+          "selected_model": {
+            "value": "forest",
+            "meaning": "Famille retenue dans le protocole mesuré"
+          },
+          "measured_time": {
+            "value": 6.304543112999454,
+            "meaning": "Le temps calculé inclut entraînement et validation croisée sur ce poste"
+          },
+          "memory_scope": {
+            "value": 374.81640625,
+            "meaning": "Le pic mémoire est cumulatif au processus, pas un coût isolé de chaque modèle"
+          },
+          "energy_limit": {
+            "value": "not measured",
+            "meaning": "Aucune mesure énergétique ou carbone, les indicateurs de calcul ne sont que des proxys"
+          },
+          "historical_scope": {
+            "value": "historical data",
+            "meaning": "Les mesures portent sur une cohorte historique et un environnement local"
+          },
+          "review_requirement": {
+            "value": true,
+            "meaning": "Relecture humaine nécessaire pour décider du compromis qualité et ressources"
+          }
+        },
+        "output": {
+          "summary": "Le modèle sélectionné est basé sur un protocole de validation avec une précision moyenne, et il appartient à la famille des arbres. Les mesures incluent le temps d'entraînement et de validation croisée, ainsi que le pic mémoire cumulatif. Il n'y a pas de mesure énergétique ou carbone. Les données proviennent d'une cohorte historique et d'un environnement local. Une relecture humaine est nécessaire pour évaluer le compromis entre qualité et ressources.",
+          "limits": "Les données sont historiques, une relecture humaine est nécessaire pour évaluer le compromis entre qualité et ressources.",
+          "evidence_ids": [
+            "selection_protocol",
+            "selected_model",
+            "measured_time",
+            "memory_scope",
+            "energy_limit",
+            "historical_scope",
+            "review_requirement"
+          ]
+        },
+        "request_options": {
+          "num_ctx": 2048,
+          "num_batch": 64,
+          "num_thread": 2,
+          "num_predict": 360,
+          "seed": 42,
+          "temperature": 0.1,
+          "repeat_penalty": 1.1
+        },
+        "think": false,
+        "elapsed_seconds": 21.749495316999855,
+        "timing_ns": {
+          "total_duration": 21741789521,
+          "load_duration": 1133679,
+          "prompt_eval_duration": 4403132000,
+          "eval_duration": 17308381000
+        },
+        "tokens": {
+          "prompt_eval_count": 422,
+          "eval_count": 200
+        },
+        "email_sent": false,
+        "validation_scope": "Schema, fact references, numeric invention markers, limited language guards; not semantic correctness or human review"
+      },
+      "reference_coverage": 1.0,
+      "mean_words_per_sentence_proxy": 14.0,
+      "proxy_limit": "Sentence length is not a validated clarity score; lexical guards do not prove inclusivity or business accuracy"
+    },
+    {
+      "case": "resources",
+      "method": "llm",
+      "temperature": 0.4,
+      "valid": true,
+      "result": {
+        "created_at_utc": "2026-11-20T08:35:08.591970+00:00",
+        "case": "resources",
+        "status": "draft_requires_human_review",
+        "model": "qwen3:1.7b",
+        "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "prompt_version": "bc2-facts-fr-v2-qualitative-context",
+        "system_sha256": "6d8d28b3afa9d641ab929e31d9012ceb31b32629cc9550ccb45d2e78cf487fbd",
+        "facts_sha256": "91fa7b04a87438ac3c72fe2ea45b70a83cb3ab8831cba55c0b66bcc20545294d",
+        "model_context": {
+          "selection_protocol": {
+            "meaning": "Le modèle est choisi sur validation, pas sur le test",
+            "value": "validation average precision"
+          },
+          "selected_model": {
+            "meaning": "Famille retenue dans le protocole mesuré",
+            "value": "forest"
+          },
+          "measured_time": {
+            "meaning": "Le temps calculé inclut entraînement et validation croisée sur ce poste"
+          },
+          "memory_scope": {
+            "meaning": "Le pic mémoire est cumulatif au processus, pas un coût isolé de chaque modèle"
+          },
+          "energy_limit": {
+            "meaning": "Aucune mesure énergétique ou carbone, les indicateurs de calcul ne sont que des proxys",
+            "value": "not measured"
+          },
+          "historical_scope": {
+            "meaning": "Les mesures portent sur une cohorte historique et un environnement local",
+            "value": "historical data"
+          },
+          "review_requirement": {
+            "meaning": "Relecture humaine nécessaire pour décider du compromis qualité et ressources"
+          }
+        },
+        "model_context_sha256": "41ae27e7e8831efc940ac5bd4d15f76b616a3f34562ba6a6f4929ef065ed29ec",
+        "facts": {
+          "selection_protocol": {
+            "value": "validation average precision",
+            "meaning": "Le modèle est choisi sur validation, pas sur le test"
+          },
+          "selected_model": {
+            "value": "forest",
+            "meaning": "Famille retenue dans le protocole mesuré"
+          },
+          "measured_time": {
+            "value": 6.304543112999454,
+            "meaning": "Le temps calculé inclut entraînement et validation croisée sur ce poste"
+          },
+          "memory_scope": {
+            "value": 374.81640625,
+            "meaning": "Le pic mémoire est cumulatif au processus, pas un coût isolé de chaque modèle"
+          },
+          "energy_limit": {
+            "value": "not measured",
+            "meaning": "Aucune mesure énergétique ou carbone, les indicateurs de calcul ne sont que des proxys"
+          },
+          "historical_scope": {
+            "value": "historical data",
+            "meaning": "Les mesures portent sur une cohorte historique et un environnement local"
+          },
+          "review_requirement": {
+            "value": true,
+            "meaning": "Relecture humaine nécessaire pour décider du compromis qualité et ressources"
+          }
+        },
+        "output": {
+          "summary": "Le modèle sélectionné est une forêt d'arbres, utilisé sur un ensemble historique, avec une validation effectuée en mode 'validation average precision'. Le temps de calcul inclut l'entraînement et la validation croisée. La mémoire utilisée est cumulatifs, sans mesure énergétique. Une relecture humaine est nécessaire pour évaluer le compromis entre qualité et ressources.",
+          "limits": "Les données sont historiques, une relecture humaine est nécessaire, et les indicateurs de calcul ne représentent pas directement des mesures réelles.",
+          "evidence_ids": [
+            "selection_protocol",
+            "selected_model",
+            "measured_time",
+            "memory_scope",
+            "energy_limit",
+            "historical_scope",
+            "review_requirement"
+          ]
+        },
+        "request_options": {
+          "num_ctx": 2048,
+          "num_batch": 64,
+          "num_thread": 2,
+          "num_predict": 360,
+          "seed": 42,
+          "temperature": 0.4,
+          "repeat_penalty": 1.1
+        },
+        "think": false,
+        "elapsed_seconds": 16.439031040000373,
+        "timing_ns": {
+          "total_duration": 16428955536,
+          "load_duration": 1898310,
+          "prompt_eval_duration": 85529000,
+          "eval_duration": 16334790000
+        },
+        "tokens": {
+          "prompt_eval_count": 422,
+          "eval_count": 181
+        },
+        "email_sent": false,
+        "validation_scope": "Schema, fact references, numeric invention markers, limited language guards; not semantic correctness or human review"
+      },
+      "reference_coverage": 1.0,
+      "mean_words_per_sentence_proxy": 13.0,
+      "proxy_limit": "Sentence length is not a validated clarity score; lexical guards do not prove inclusivity or business accuracy"
+    }
+  ],
+  "human_rubric": {
+    "status": "not performed",
+    "criteria": [
+      "clarté",
+      "pertinence métier",
+      "inclusivité",
+      "fidélité sémantique"
+    ],
+    "no_fabricated_human_rating": true
+  },
+  "energy": "No energy/CO2 sensor measurement; measured wall time and tokens only"
+}

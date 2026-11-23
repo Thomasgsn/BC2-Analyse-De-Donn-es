@@ -1,0 +1,91 @@
+{
+  "created_at_utc": "2026-11-20T08:31:07.293562+00:00",
+  "case": "portfolio",
+  "status": "draft_requires_human_review",
+  "model": "qwen3:1.7b",
+  "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "prompt_version": "bc2-facts-fr-v2-qualitative-context",
+  "system_sha256": "6d8d28b3afa9d641ab929e31d9012ceb31b32629cc9550ccb45d2e78cf487fbd",
+  "facts_sha256": "2e962e631b1c41e49b75162d2687f29d82de0a1a228b430782067d960e95890d",
+  "model_context": {
+    "dataset_period": {
+      "meaning": "cohorte historique, sans validation temporelle future"
+    },
+    "selected_model": {
+      "meaning": "choisi sur validation, pas sur test",
+      "value": "forest"
+    },
+    "test_recall": {
+      "meaning": "fraction de défauts détectés sur le test réservé"
+    },
+    "test_precision": {
+      "meaning": "fraction de défauts parmi les alertes, nombreuses fausses alertes"
+    },
+    "test_false_positives": {
+      "meaning": "charge de revue humaine, pas une mesure monétaire"
+    },
+    "human_review": {
+      "meaning": "aucune décision automatique de crédit"
+    }
+  },
+  "model_context_sha256": "7e9bc0fee4770f76c3dfa8a615139e30fe46bc4d02294e2267d1eeceb24c6156",
+  "facts": {
+    "dataset_period": {
+      "value": "Taiwan 2005",
+      "meaning": "cohorte historique, sans validation temporelle future"
+    },
+    "selected_model": {
+      "value": "forest",
+      "meaning": "choisi sur validation, pas sur test"
+    },
+    "test_recall": {
+      "value": 0.8070836473247928,
+      "meaning": "fraction de défauts détectés sur le test réservé"
+    },
+    "test_precision": {
+      "value": 0.3417358008934269,
+      "meaning": "fraction de défauts parmi les alertes, nombreuses fausses alertes"
+    },
+    "test_false_positives": {
+      "value": 2063,
+      "meaning": "charge de revue humaine, pas une mesure monétaire"
+    },
+    "human_review": {
+      "value": true,
+      "meaning": "aucune décision automatique de crédit"
+    }
+  },
+  "output": {
+    "summary": "Le portfolio est évalué sur un modèle de forest (validation effectuée, test non utilisé). Le modèle détecte une fraction de défauts sur le test réservé, mais avec un taux de faux positifs élevé. L'évaluation montre que les alertes sont nombreuses, ce qui peut entraîner un charge de revue humaine. Aucune décision automatique de crédit n'est prise.",
+    "limits": "Les données sont historiques et une relecture humaine est nécessaire.",
+    "evidence_ids": [
+      "test_recall",
+      "test_precision",
+      "test_false_positives",
+      "human_review"
+    ]
+  },
+  "request_options": {
+    "num_ctx": 2048,
+    "num_batch": 64,
+    "num_thread": 2,
+    "num_predict": 360,
+    "seed": 42,
+    "temperature": 0.1,
+    "repeat_penalty": 1.1
+  },
+  "think": false,
+  "elapsed_seconds": 18.80803766900044,
+  "timing_ns": {
+    "total_duration": 18797756177,
+    "load_duration": 14306173,
+    "prompt_eval_duration": 4857062000,
+    "eval_duration": 13530988000
+  },
+  "tokens": {
+    "prompt_eval_count": 344,
+    "eval_count": 147
+  },
+  "email_sent": false,
+  "validation_scope": "Schema, fact references, numeric invention markers, limited language guards; not semantic correctness or human review"
+}

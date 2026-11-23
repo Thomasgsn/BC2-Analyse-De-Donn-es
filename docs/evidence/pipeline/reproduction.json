@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "baseline": "baseline-20261120-v2",
+  "reproduction": "reproduce-20261120-v1",
+  "identical_test_predictions_all_four_models": true,
+  "identical_cohort_and_partitions": true,
+  "rows": 6000,
+  "qualification": "Same locked image and machine, independent output and model directories; timings differ"
+}

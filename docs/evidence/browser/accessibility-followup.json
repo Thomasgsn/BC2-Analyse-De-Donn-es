@@ -1,0 +1,47 @@
+{
+  "event": "accessibility_followup",
+  "keyboard_details": true,
+  "exports": {
+    "correlations": {
+      "rows": 14,
+      "columns": [
+        "",
+        "LIMIT_BAL",
+        "AGE",
+        "BILL_AMT1",
+        "BILL_AMT2",
+        "BILL_AMT3",
+        "BILL_AMT4",
+        "BILL_AMT5",
+        "BILL_AMT6",
+        "PAY_AMT1",
+        "PAY_AMT2",
+        "PAY_AMT3",
+        "PAY_AMT4",
+        "PAY_AMT5",
+        "PAY_AMT6"
+      ],
+      "sha256": "1c761d9fa90d286da1f4d0bd0720442df347424b8ba26bcf8911b658104eb307"
+    },
+    "projections": {
+      "rows": 600,
+      "columns": [
+        "pc1",
+        "pc2",
+        "lda1",
+        "y"
+      ],
+      "sha256": "9d9970a0326381487f6ede87a6f6056c34c12d562fac253965172246fd3c22bd"
+    }
+  },
+  "unknown_export_status": 404,
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": 134
+    }
+  ],
+  "scope": "Vraie interface et exports ; contrôle automatique, pas de validation humaine WCAG.",
+  "mobile_global_overflow": false
+}

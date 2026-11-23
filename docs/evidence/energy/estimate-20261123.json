@@ -1,0 +1,95 @@
+{
+  "created_at_utc": "2026-11-23T19:44:20.150123+00:00",
+  "status": "estimation a posteriori, pas une mesure par capteur",
+  "inputs": {
+    "run_id": "baseline-20261120-v2",
+    "models_sha256": "78719ab7d5ad8a8e98849410e19a8168aa3a9e5f1a93c5e3a53b4db146c8410c",
+    "manifest_sha256": "c07e3f2a7305fa87967886ac4cff986c8a8d0d0e74d2f06141811b12cbd125a0",
+    "generation_sha256": "8b17cd31e41b9369d6dc1b1aa386164a3f9e53797a7770b0400e274143f9840c"
+  },
+  "assumptions": {
+    "cpu": "Intel Core i9-9980HK (8 cœurs, 16 threads)",
+    "cpu_tdp_w": 45.0,
+    "cpu_sustained_w_high": 55.0,
+    "watts_per_cpu_second": 5.625,
+    "memory_w_per_gb": 0.3725,
+    "pue": 1.0,
+    "carbon_g_per_kwh": 19.6,
+    "carbon_max_g_per_kwh_high": 58.0,
+    "sources": {
+      "method": "Lannelongue, Grealey, Inouye, Green Algorithms, Advanced Science 2021, arXiv:2007.07610",
+      "cpu_tdp": "https://www.intel.com/content/www/us/en/products/sku/192990/intel-core-i99980hk-processor-16m-cache-up-to-5-00-ghz/specifications.html",
+      "cpu_sustained": "https://www.notebookcheck.net/Intel-Core-i9-9980HK-Processor-Benchmarks-and-Specs.416730.0.html",
+      "carbon_intensity": "https://analysesetdonnees.rte-france.com/en/annual-review-2025/ghg-emissions"
+    }
+  },
+  "training_per_model": {
+    "dummy": {
+      "cpu_seconds": 0.8128318059999984,
+      "wall_seconds": 0.8128820240008281,
+      "joules": 4.68,
+      "wh": 0.0013,
+      "co2_g": 2.5e-05
+    },
+    "logistic": {
+      "cpu_seconds": 6.8028833639999995,
+      "wall_seconds": 2.963061777999428,
+      "joules": 38.66,
+      "wh": 0.0107,
+      "co2_g": 0.00021
+    },
+    "tree": {
+      "cpu_seconds": 2.2758349150000043,
+      "wall_seconds": 2.1858105629999045,
+      "joules": 13.09,
+      "wh": 0.0036,
+      "co2_g": 7.1e-05
+    },
+    "forest": {
+      "cpu_seconds": 10.206394799999998,
+      "wall_seconds": 6.304543112999454,
+      "joules": 58.27,
+      "wh": 0.0162,
+      "co2_g": 0.000317
+    }
+  },
+  "training_total": {
+    "joules": 114.71,
+    "wh": 0.0319,
+    "co2_g": 0.000625
+  },
+  "training_total_high": {
+    "joules": 139.83,
+    "wh": 0.0388,
+    "co2_g": 0.002253
+  },
+  "full_run_upper_bound": {
+    "elapsed_seconds": 39.27460778299974,
+    "threads": 2,
+    "joules": 441.84,
+    "wh": 0.1227,
+    "co2_g": 0.002406
+  },
+  "llm_generations": {
+    "count": 4,
+    "seconds": 66.92,
+    "upper_bound": {
+      "joules": 3011.29,
+      "wh": 0.8365,
+      "co2_g": 0.016395
+    },
+    "upper_bound_high": {
+      "joules": 3680.47,
+      "wh": 1.0224,
+      "co2_g": 0.059296
+    },
+    "per_generation_wh": 0.2091
+  },
+  "llm_vs_training_ratio": 6.6,
+  "not_included": [
+    "surcoût de la machine virtuelle Docker",
+    "écran, disque, réseau et consommation au repos",
+    "fabrication du matériel",
+    "téléchargement du dataset et du modèle"
+  ]
+}

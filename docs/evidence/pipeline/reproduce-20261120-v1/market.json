@@ -1,0 +1,26 @@
+{
+  "source": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=demo",
+  "retrieved_or_checked_at_utc": "2026-11-20T08:36:50.680294+00:00",
+  "mode": "existing immutable local cache",
+  "cache_sha256": "7d56a1734ddb85c11a0b1ee915528163d16c47ac636d6e3baedca8da0f73652e",
+  "symbol": "IBM",
+  "rows": 100,
+  "first_date": "2026-07-01",
+  "last_date": "2026-11-19",
+  "timezone_of_session": "US/Eastern",
+  "currency": null,
+  "currency_note": "Currency not present in this response; do not invent a currency label",
+  "price_type": "Raw daily OHLCV, not dividend-adjusted total return",
+  "annualization": "Sample standard deviation of 20 log returns times sqrt(252), convention not measured trading calendar",
+  "max_drawdown": -0.32783458008035793,
+  "period_price_return": -0.21788646288209612,
+  "return_volume_spearman": 0.05688311688311688,
+  "no_customer_join": true,
+  "rights": "Provider personal/non-commercial research terms, raw data excluded from delivery archive; no public hosting",
+  "qualifications": [
+    "Daily historical snapshot, not real-time feed",
+    "2026 quotation window has no temporal join to the 2005 client cohort",
+    "Missing market dates are not forward-filled",
+    "Demo key is the provider public example, not a private API credential"
+  ]
+}

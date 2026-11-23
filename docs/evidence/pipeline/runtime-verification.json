@@ -1,0 +1,33 @@
+{
+  "at_utc": "2026-11-20T08:59:05.664790+00:00",
+  "event": "real_pipeline_verified",
+  "run_id": "reproduce-20261120-v1",
+  "all_manifest_files_verified": 13,
+  "group_overlap": 0,
+  "models_reloaded": {
+    "dummy": {
+      "rows": 6000,
+      "scores_sha256": "1f7bf9eb22e8bdb11c85555c2cee90f098afc597d654be8d4f9070215125b80c",
+      "exact": true
+    },
+    "logistic": {
+      "rows": 6000,
+      "scores_sha256": "7790999fcb1b708fccf4e3d3818e109a6475949dd9c114a8e4971e9cf15a5cb5",
+      "exact": true
+    },
+    "tree": {
+      "rows": 6000,
+      "scores_sha256": "f3c5bb7d8964072e0688462249f27db92078cbcd211fb6dd06517388e8dbfe23",
+      "exact": true
+    },
+    "forest": {
+      "rows": 6000,
+      "scores_sha256": "2ec77cbf5d71fdba929aed82f639d54ac0224cadeb34be180bd91e79c3c2d728",
+      "exact": true
+    }
+  },
+  "pca_variance_sum": 1.0,
+  "lda_axes": 1,
+  "market_rows": 100,
+  "test_not_retuned": true
+}

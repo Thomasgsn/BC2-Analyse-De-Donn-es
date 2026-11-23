@@ -1,0 +1,37 @@
+{
+  "run_id": "baseline-20261120-v2",
+  "status": "complete",
+  "finished_at_utc": "2026-11-20T08:21:20.430111+00:00",
+  "elapsed_seconds": 39.27460778299974,
+  "python": "3.12.16",
+  "platform": "Linux-7.0.14-linuxkit-x86_64-with-glibc2.41",
+  "seed": 42,
+  "teacher_approval": "not provided; technical implementation authorized by user",
+  "threads": 2,
+  "versions": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "dash": "4.5.1",
+    "plotly": "7.1.0",
+    "pyarrow": "26.0.1",
+    "psutil": "7.2.2",
+    "xlrd": "2.0.2"
+  },
+  "files": {
+    "cohort.parquet": "73e5fd510800192c85ae54de3e40a885828408a3a4d68bfa6f217f8f8f0f6b7c",
+    "dictionary.csv": "946aa150f3787dc0e6686a36faa7f510861a6bba328cd1e82eb0515988d86e41",
+    "eda.json": "dc3b8d349324b92d899c6edbb8c01e471801b2d12d11e50ed0d12617a61ab6c7",
+    "market.json": "bce414c607407dc4e7b5f85c05e88583f30abdd9b6f3c56cfa638beb954daa7d",
+    "market.parquet": "5ee8d731a9b96227312e76a89c6b2c48a696485eb5f5924f0902b4dbf8b6a460",
+    "models.json": "78719ab7d5ad8a8e98849410e19a8168aa3a9e5f1a93c5e3a53b4db146c8410c",
+    "pearson.csv": "70e58dbd9a81b6664ea2424c8c3788c7e6c5d2da90bf4a633de554e9d37f92f6",
+    "projections.json": "f1416e9805a9ceb9eb11b27cbf1f9855811f513009ea90cf6f3fdcd4e927f416",
+    "quality.json": "6f3cd1587be3439b702b97d77e01c34e3b7ecba2357083ba19c7c5a359fc14ff",
+    "selection-before-test.json": "aa7b630e22d669f963aac8ad1e0961fb9d501b4cb94fd33d8f0d4da5e4ad8a35",
+    "spearman.csv": "58277c33d2273a5dcf424464eab3b4772df81f75e3b26b6f9659cc548481161a",
+    "test-predictions.parquet": "e5a4611577366c7c76f88bdee8dc514f1632e3965b7dc52d96634668cd777c45",
+    "univariate.csv": "5202220f62e932a897054a234704ba05bb4d03f35583d4a016b510014ba41583"
+  }
+}

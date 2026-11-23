@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-20",
+  "scope": "BC2 framing only",
+  "pdf_sources_verified": 3,
+  "subject_pages_read": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "reference_pages_read": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "pdf_rendered_and_visually_inspected": true,
+  "provided_dataset_present": false,
+  "alternative_dataset_adopted": false,
+  "teacher_approval_recorded": false,
+  "plan_approved": false,
+  "yahoo_probe": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BNP.PA?range=1mo&interval=1d",
+    "http_status": 429,
+    "curl_exit_code": 56,
+    "dataset_downloaded": false
+  },
+  "global_python": "3.13",
+  "global_scientific_packages_checked_absent": [
+    "pandas",
+    "sklearn"
+  ],
+  "hardware_memory_probe": "sysctl refused; historical 16GB host/11.67GiB Docker not remeasured",
+  "free_disk_observed": "369GiB shared filesystem, not reservation",
+  "application_tests_executed": 0,
+  "code_implemented": false,
+  "bc3_started": false,
+  "new_commit_push_email": false
+}

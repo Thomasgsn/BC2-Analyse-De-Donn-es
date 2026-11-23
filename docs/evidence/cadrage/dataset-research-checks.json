@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-20",
+  "scope": "Dataset research documents, source digests and counts consistency; no ML tests",
+  "checks": {
+    "markdown": 10,
+    "json": 4,
+    "local_links": 19
+  },
+  "hashes_verified": [
+    "official ZIP",
+    "source XLS"
+  ],
+  "source_workbook_unmodified": true,
+  "errors": [],
+  "status": "passed"
+}

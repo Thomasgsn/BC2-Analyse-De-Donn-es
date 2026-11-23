@@ -1,0 +1,61 @@
+{
+  "purpose": "Facts fixed for final generative evaluation before any calls on these scenarios; development cases portfolio/market excluded",
+  "cases": {
+    "quality": {
+      "source_integrity": {
+        "value": "SHA verified",
+        "meaning": "La source originale est conservée et vérifiée par empreinte"
+      },
+      "blank_cells": {
+        "value": 0,
+        "meaning": "Aucune cellule vide observée, sans garantie que tous les codes soient expliqués"
+      },
+      "coded_categories": {
+        "value": "ambiguous observed categories",
+        "meaning": "Des codes de catégories doivent être documentés, sans suppression silencieuse"
+      },
+      "group_separation": {
+        "value": 0,
+        "meaning": "Les profils identiques sont groupés dans un seul lot pour limiter les fuites"
+      },
+      "historical_scope": {
+        "value": "historical cohort",
+        "meaning": "La cohorte est historique, pas un échantillon bancaire actuel"
+      },
+      "review_requirement": {
+        "value": true,
+        "meaning": "Une relecture humaine et une validation pédagogique restent nécessaires"
+      }
+    },
+    "resources": {
+      "selection_protocol": {
+        "value": "validation average precision",
+        "meaning": "Le modèle est choisi sur validation, pas sur le test"
+      },
+      "selected_model": {
+        "value": "forest",
+        "meaning": "Famille retenue dans le protocole mesuré"
+      },
+      "measured_time": {
+        "value": 6.304543112999454,
+        "meaning": "Le temps calculé inclut entraînement et validation croisée sur ce poste"
+      },
+      "memory_scope": {
+        "value": 374.81640625,
+        "meaning": "Le pic mémoire est cumulatif au processus, pas un coût isolé de chaque modèle"
+      },
+      "energy_limit": {
+        "value": "not measured",
+        "meaning": "Aucune mesure énergétique ou carbone, les indicateurs de calcul ne sont que des proxys"
+      },
+      "historical_scope": {
+        "value": "historical data",
+        "meaning": "Les mesures portent sur une cohorte historique et un environnement local"
+      },
+      "review_requirement": {
+        "value": true,
+        "meaning": "Relecture humaine nécessaire pour décider du compromis qualité et ressources"
+      }
+    }
+  }
+}

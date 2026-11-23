@@ -1,0 +1,72 @@
+{
+  "created_at_utc": "2026-11-20T08:27:29.734534+00:00",
+  "case": "portfolio",
+  "status": "rejected",
+  "model": "qwen3:1.7b",
+  "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "prompt_version": "bc2-facts-fr-v1",
+  "system_sha256": "6d8d28b3afa9d641ab929e31d9012ceb31b32629cc9550ccb45d2e78cf487fbd",
+  "facts_sha256": "2e962e631b1c41e49b75162d2687f29d82de0a1a228b430782067d960e95890d",
+  "facts": {
+    "dataset_period": {
+      "value": "Taiwan 2005",
+      "meaning": "cohorte historique, sans validation temporelle future"
+    },
+    "selected_model": {
+      "value": "forest",
+      "meaning": "choisi sur validation, pas sur test"
+    },
+    "test_recall": {
+      "value": 0.8070836473247928,
+      "meaning": "fraction de défauts détectés sur le test réservé"
+    },
+    "test_precision": {
+      "value": 0.3417358008934269,
+      "meaning": "fraction de défauts parmi les alertes, nombreuses fausses alertes"
+    },
+    "test_false_positives": {
+      "value": 2063,
+      "meaning": "charge de revue humaine, pas une mesure monétaire"
+    },
+    "human_review": {
+      "value": true,
+      "meaning": "aucune décision automatique de crédit"
+    }
+  },
+  "output": {
+    "summary": "Le modèle forest a été utilisé pour prédire des défauts dans un portfolio historique (Taiwan 2005). Il présente une recall test de 80,7 % et une précision test de 34,2 %. Il détecte 2063 alertes fausses, avec une revue humaine nécessaire pour évaluer les décisions de crédit.",
+    "limits": "Les données sont historiques et une relecture humaine est nécessaire. Aucun chiffre, pourcentage ou montant n'a été inclus dans la synthèse.",
+    "evidence_ids": [
+      "dataset_period",
+      "selected_model",
+      "test_recall",
+      "test_precision",
+      "test_false_positives",
+      "human_review"
+    ]
+  },
+  "request_options": {
+    "num_ctx": 2048,
+    "num_batch": 64,
+    "num_thread": 2,
+    "num_predict": 360,
+    "seed": 42,
+    "temperature": 0.1,
+    "repeat_penalty": 1.1
+  },
+  "think": false,
+  "elapsed_seconds": 43.734673362999274,
+  "timing_ns": {
+    "total_duration": 43718490165,
+    "load_duration": 16577112073,
+    "prompt_eval_duration": 9522358000,
+    "eval_duration": 17583671000
+  },
+  "tokens": {
+    "prompt_eval_count": 394,
+    "eval_count": 172
+  },
+  "email_sent": false,
+  "validation_scope": "Schema, fact references, numeric invention markers, limited language guards; not semantic correctness or human review",
+  "reason": "Chiffres, HTML ou coordonnées non autorisés dans le texte narratif"
+}

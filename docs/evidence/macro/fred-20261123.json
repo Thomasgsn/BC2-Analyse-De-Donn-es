@@ -1,0 +1,177 @@
+{
+  "snapshot_id": "fred-20261123",
+  "created_at_utc": "2026-11-23T17:37:10.835390+00:00",
+  "cohort_window": {
+    "start": "2005-04-01",
+    "end": "2005-09-30",
+    "basis": "Historique de paiement UCI d’avril à septembre 2005"
+  },
+  "series": [
+    {
+      "id": "DRCCLACBS",
+      "label": "Retards de paiement sur cartes de crédit (banques US)",
+      "unit": "% des encours",
+      "frequency": "trimestrielle",
+      "first_date": "1991-01-01",
+      "last_date": "2026-04-01",
+      "observations": 142,
+      "missing_values_kept": 0,
+      "last_value": 2.85,
+      "long_run_mean": 3.685774647887324,
+      "cohort_window_observations": 2,
+      "cohort_window_mean": 3.785,
+      "cohort_mean_percentile_in_history": 0.49295774647887325,
+      "change_1y_points": -0.18999999999999995,
+      "change_5y_points": 1.26
+    },
+    {
+      "id": "CORCCACBS",
+      "label": "Pertes sur cartes de crédit (banques US)",
+      "unit": "% annualisé des encours",
+      "frequency": "trimestrielle",
+      "first_date": "1985-01-01",
+      "last_date": "2026-04-01",
+      "observations": 166,
+      "missing_values_kept": 0,
+      "last_value": 3.82,
+      "long_run_mean": 4.255301204819276,
+      "cohort_window_observations": 2,
+      "cohort_window_mean": 4.3,
+      "cohort_mean_percentile_in_history": 0.608433734939759,
+      "change_1y_points": -0.37000000000000055,
+      "change_5y_points": 1.44
+    },
+    {
+      "id": "TERMCBCCALLNS",
+      "label": "Taux d’intérêt des cartes de crédit",
+      "unit": "%",
+      "frequency": "trimestrielle",
+      "first_date": "1994-11-01",
+      "last_date": "2026-08-01",
+      "observations": 128,
+      "missing_values_kept": 254,
+      "last_value": 21.19,
+      "long_run_mean": 14.68171875,
+      "cohort_window_observations": 2,
+      "cohort_window_mean": 12.625,
+      "cohort_mean_percentile_in_history": 0.2734375,
+      "change_1y_points": -0.1999999999999993,
+      "change_5y_points": 6.650000000000002
+    },
+    {
+      "id": "DEXTAUS",
+      "label": "Dollar taïwanais pour 1 dollar US",
+      "unit": "TWD/USD",
+      "frequency": "quotidienne",
+      "first_date": "1983-10-03",
+      "last_date": "2026-11-13",
+      "observations": 10522,
+      "missing_values_kept": 728,
+      "last_value": 32.87,
+      "long_run_mean": 31.052843984033455,
+      "cohort_window_observations": 128,
+      "cohort_window_mean": 31.829375,
+      "cohort_mean_percentile_in_history": 0.6025470442881582,
+      "change_1y_points": 1.8199999999999967,
+      "change_5y_points": 5.049999999999997
+    },
+    {
+      "id": "DGS10",
+      "label": "Taux d’État US à 10 ans",
+      "unit": "%",
+      "frequency": "quotidienne",
+      "first_date": "1962-01-02",
+      "last_date": "2026-11-19",
+      "observations": 16206,
+      "missing_values_kept": 722,
+      "last_value": 5.04,
+      "long_run_mean": 5.803004442798962,
+      "cohort_window_observations": 128,
+      "cohort_window_mean": 4.186875000000001,
+      "cohort_mean_percentile_in_history": 0.31914105886708627,
+      "change_1y_points": 0.9100000000000001,
+      "change_5y_points": 3.5
+    }
+  ],
+  "sources": [
+    {
+      "id": "DRCCLACBS",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRCCLACBS",
+      "mode": "live HTTPS FRED download",
+      "cache_sha256": "0209cae8f24e84160eab760a5b1f3f139b9d62a42dddc42752126248cc611815"
+    },
+    {
+      "id": "CORCCACBS",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CORCCACBS",
+      "mode": "live HTTPS FRED download",
+      "cache_sha256": "6a25113375310f4abfa49f3f312f1c8e48c287ce858dbbe77e59c3111a837b23"
+    },
+    {
+      "id": "TERMCBCCALLNS",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TERMCBCCALLNS",
+      "mode": "live HTTPS FRED download",
+      "cache_sha256": "d64de9aa402b70291d56aa46d2175de0983f8f8388bdec3b7c345756ddda1375"
+    },
+    {
+      "id": "DEXTAUS",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXTAUS",
+      "mode": "live HTTPS FRED download",
+      "cache_sha256": "b44bf40c3bd1d8cc88df33f32b3bf83d7741d6a69ce2113d5a8a33277e7bb571"
+    },
+    {
+      "id": "DGS10",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+      "mode": "live HTTPS FRED download",
+      "cache_sha256": "078cf9534a352af6007ae9e93cd7beb94b2616d57bc469e8e895ba19a322ccce"
+    }
+  ],
+  "quarterly_common_period": {
+    "start": "1994-12-31",
+    "end": "2026-06-30",
+    "quarters": 127
+  },
+  "spearman_quarterly_changes": {
+    "DRCCLACBS": {
+      "DRCCLACBS": 1.0,
+      "CORCCACBS": 0.467054,
+      "TERMCBCCALLNS": 0.180667,
+      "DEXTAUS": 0.160585,
+      "DGS10": -0.031045
+    },
+    "CORCCACBS": {
+      "DRCCLACBS": 0.467054,
+      "CORCCACBS": 1.0,
+      "TERMCBCCALLNS": -0.007608,
+      "DEXTAUS": 0.194705,
+      "DGS10": 0.001278
+    },
+    "TERMCBCCALLNS": {
+      "DRCCLACBS": 0.180667,
+      "CORCCACBS": -0.007608,
+      "TERMCBCCALLNS": 1.0,
+      "DEXTAUS": 0.065731,
+      "DGS10": 0.132919
+    },
+    "DEXTAUS": {
+      "DRCCLACBS": 0.160585,
+      "CORCCACBS": 0.194705,
+      "TERMCBCCALLNS": 0.065731,
+      "DEXTAUS": 1.0,
+      "DGS10": -0.099063
+    },
+    "DGS10": {
+      "DRCCLACBS": -0.031045,
+      "CORCCACBS": 0.001278,
+      "TERMCBCCALLNS": 0.132919,
+      "DEXTAUS": -0.099063,
+      "DGS10": 1.0
+    }
+  },
+  "no_customer_join": true,
+  "qualifications": [
+    "Séries US et taux de change : contexte sectoriel et monétaire, pas la situation des clients taïwanais",
+    "Corrélations sur variations trimestrielles : association, pas causalité",
+    "Valeurs manquantes FRED conservées, jamais remplies",
+    "Données brutes exclues de l’archive ; réutilisation selon les conditions FRED/Réserve fédérale"
+  ]
+}
