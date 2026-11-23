@@ -13,7 +13,6 @@ Le projet analyse 30 000 clients de cartes de crédit (dataset public UCI, Taïw
 | [docs/rapport.md](docs/rapport.md) | Besoin, données, méthode, résultats, stratégie IA, limites, correspondance RNCP |
 | [Rapport PDF](output/pdf/rapport-bc2-thomas-gassmann.pdf) | Rapport final de 14 pages |
 | [Support de soutenance](output/presentations/soutenance-bc2-thomas-gassmann.pptx) | 15 diapositives éditables |
-| [docs/checklist.md](docs/checklist.md) | Actions qui restent à faire |
 | [docs/dictionnaire.md](docs/dictionnaire.md) | Termes statistiques et techniques expliqués |
 | `docs/evidence/` | Preuves : résultats du pipeline, figures, tests navigateur, évaluation générative |
 
