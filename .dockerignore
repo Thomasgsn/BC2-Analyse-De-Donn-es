@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.git
+.venv*
+data
+models
+exports
+output
+tmp
+logs
+**/__pycache__

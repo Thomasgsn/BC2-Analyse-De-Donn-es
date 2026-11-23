@@ -1,0 +1,22 @@
+{
+  "model": "qwen3:1.7b",
+  "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "bytes": 1359293444,
+  "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "qwen3",
+    "families": [
+      "qwen3"
+    ],
+    "parameter_size": "2.0B",
+    "quantization_level": "Q4_K_M",
+    "context_length": 40960,
+    "embedding_length": 2048,
+    "runner": "ggml"
+  },
+  "license": "Apache License 2.0",
+  "license_sha256": "d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+  "source": "Actual local Ollama /api/tags and /api/show after provider pull; model card https://huggingface.co/Qwen/Qwen3-1.7B",
+  "scope": "Public weights only, no BC1 runtime/volume/keys reused"
+}

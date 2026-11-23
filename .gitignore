@@ -1,0 +1,25 @@
+# Données, identités et artefacts locaux
+.env
+.env.*
+!.env.example
+.venv*/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+.DS_Store
+.idea/
+data/
+models/
+exports/
+logs/
+tmp/
+volumes/
+**/secrets/
+*.key
+*.pem
+output/*.zip
+output/delivery-manifest.json
+
+# Copies temporaires du finaliseur de présentation
+.chart-data-*/
