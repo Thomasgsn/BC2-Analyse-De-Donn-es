@@ -1,7 +1,5 @@
 # Rapport BC2 — Analyse du défaut bancaire et IA générative
 
-Thomas Gassmann — RNCP40875, bloc 2 — travail individuel — 23 novembre 2026
-
 Version PDF complète (14 pages, avec figures) : [rapport-bc2-thomas-gassmann.pdf](../output/pdf/rapport-bc2-thomas-gassmann.pdf).
 
 ## Besoin

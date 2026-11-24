@@ -1,10 +1,8 @@
 # BC2 — Analyse du défaut bancaire et IA générative
 
-Thomas Gassmann · RNCP40875, bloc 2 · travail individuel (le sujet prévoit un binôme).
-
 Le projet analyse 30 000 clients de cartes de crédit (dataset public UCI, Taïwan, 2005) pour comprendre et prédire le [défaut de paiement](docs/dictionnaire.md#défaut-de-paiement). Il compare quatre modèles, présente les résultats dans un tableau de bord interactif, ajoute des données financières et macro-économiques externes, et teste un LLM local qui rédige des synthèses à relire.
 
-**Choix des données** : le dataset de référence du sujet n’étant pas disponible, le projet utilise le dataset public UCI Default of Credit Card Clients ; la cible est donc le défaut de paiement du mois suivant, et non la résiliation.
+**Choix des données** : le projet utilise le dataset public UCI Default of Credit Card Clients ; la cible est donc le défaut de paiement du mois suivant, et non la résiliation.
 
 ## Documents du rendu
 
@@ -12,7 +10,7 @@ Le projet analyse 30 000 clients de cartes de crédit (dataset public UCI, Taïw
 |---|---|
 | [docs/rapport.md](docs/rapport.md) | Besoin, données, méthode, résultats, stratégie IA, limites, correspondance RNCP |
 | [Rapport PDF](output/pdf/rapport-bc2-thomas-gassmann.pdf) | Rapport final de 14 pages |
-| [Support de soutenance](output/presentations/soutenance-bc2-thomas-gassmann.pptx) | 15 diapositives éditables |
+| [Support de soutenance](output/presentations/soutenance-bc2-thomas-gassmann.pptx) | 15 diapositives |
 | [docs/dictionnaire.md](docs/dictionnaire.md) | Termes statistiques et techniques expliqués |
 | `docs/evidence/` | Preuves : résultats du pipeline, figures, tests navigateur, évaluation générative |
 
@@ -92,7 +90,7 @@ Les résultats du rapport viennent du run `baseline-20261120-v2` et du snapshot 
 
 ## Usage de l’IA
 
-J’ai utilisé des assistants d’IA générative (Codex, puis Claude pour les derniers ajouts et la relecture) pour la réécriture des textes, la recherche et le sourçage des références et l’aide au développement. Les résultats cités viennent des exécutions du projet et renvoient à `docs/evidence/`. Cet usage est distinct du modèle Qwen du prototype.
+J’ai utilisé des assistants d’IA générative (Codex, puis Claude pour les derniers ajouts et la relecture) pour la réécriture des textes, la recherche et le sourçage des références et l’aide au développement. Les résultats cités viennent des exécutions du projet et renvoient à `docs/evidence/`.
 
 ## Limites principales
 
