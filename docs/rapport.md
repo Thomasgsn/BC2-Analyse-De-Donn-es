@@ -163,4 +163,4 @@ Impact : l’outil aide à comprendre et prioriser, il ne remplace pas la décis
 
 ## Usage de l’IA dans la réalisation
 
-J’ai utilisé des assistants d’IA générative (Codex, puis Claude pour les derniers ajouts et la relecture) pour la réécriture des textes, la recherche et le sourçage des références et l’aide au développement. Les résultats cités proviennent des exécutions du projet et renvoient à des fichiers de preuve ; j’assume le contenu et sa présentation.
+J’ai utilisé des assistants d’IA générative (Codex, puis Claude pour les derniers ajouts et la relecture) pour la réécriture des textes, la recherche et le sourçage des références et l’aide au développement. Les résultats cités proviennent des exécutions du projet et renvoient à des fichiers de preuve.

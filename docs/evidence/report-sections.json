@@ -2,7 +2,6 @@
   {
     "title": "Analyse du défaut bancaire",
     "paragraphs": [
-      "RNCP40875 — Bloc 2 : analyse de données et intelligence artificielle. Thomas Gassmann, travail individuel. Livraison locale du 20 novembre 2026, complétée le 23 novembre (contexte macro-économique). Échéance non communiquée.",
       "Question étudiée : comment comparer des méthodes de détection du défaut de paiement, comprendre les erreurs et présenter des indicateurs à un analyste bancaire ? Le score reste une aide à l’exploration, sans décision automatique de crédit.",
       "Le dataset officiel UCI Default of Credit Card Clients contient 30 000 observations et 23 variables explicatives. Le dataset de référence du sujet n’étant pas disponible, ce dataset public de référence en risque de crédit est utilisé : la cible devient le défaut de paiement du mois suivant au lieu de la résiliation, avec la même démarche d’analyse.",
       "La forêt choisie sur validation atteint un rappel de 80,71 % et une précision de 34,17 % sur 6 000 observations réservées. Les 2 063 fausses alertes imposent une revue humaine importante. Le résultat ne démontre ni rentabilité, ni aptitude à traiter des clients actuels.",
@@ -360,7 +359,7 @@
     "title": "Usage de l’IA dans la réalisation",
     "paragraphs": [
       "J’ai utilisé des assistants d’IA générative (Codex, puis Claude pour les derniers ajouts et la relecture) pour la réécriture des textes, la recherche et le sourçage des références (documentation des outils, sources de données, licences) et l’aide au développement.",
-      "Les résultats cités proviennent des exécutions du projet et renvoient à des fichiers de preuve dans docs/evidence ; j’assume le contenu et sa présentation. Cet usage est distinct du modèle Qwen du prototype, évalué dans la section consacrée à l’IA générative.",
+      "Les résultats cités proviennent des exécutions du projet et renvoient à des fichiers de preuve dans docs/evidence. Cet usage est distinct du modèle Qwen du prototype, évalué dans la section consacrée à l’IA générative.",
       "Sources ajoutées le 23 novembre : FRED, séries DRCCLACBS, CORCCACBS, TERMCBCCALLNS, DEXTAUS et DGS10 (Board of Governors of the Federal Reserve System), fred.stlouisfed.org ; empreintes dans docs/evidence/macro/fred-20261123.json."
     ],
     "table": null,
